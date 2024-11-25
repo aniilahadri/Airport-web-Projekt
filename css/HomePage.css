@@ -72,14 +72,60 @@ header{
 .header-right-section .sign-in:hover{
     background-color: rgba(255,255,255,0.4) ;
 }
-.main-img {
+.primary-image-container, .main-img {
     min-width:700px;
     height: 500px;
-    margin: 0 auto;
-   
+    margin: 0 auto;   
 }
 .main-img img{
     width: 100%;
     max-height:100% ;
     object-fit: cover;
+}
+
+.flight-arrivals-departures{
+  margin-top: -100px;
+   z-index: 2; 
+   position: relative;
+   background-color: aquamarine;
+}
+
+.overlay{
+  background-color: lightblue;
+  position: absolute;
+  right: 0;
+  height: calc(100% - 100px);
+  bottom:0;
+  width: 100%;
+}
+.container-flights{
+ background-color:lightsalmon;
+ width: 750px; 
+ margin: 0 auto; 
+ position: relative; 
+ padding: 15px;
+}
+.top-container-flights{
+ background-color: lightcoral; 
+ height: 100px; 
+ display: flex; 
+ justify-content: flex-start; 
+ align-items: center; 
+ gap: 20px; 
+ padding: 0 32px;
+  font-size: 1.5em;
+}
+.top-container-flights button{
+  border: none; 
+  height: 50%; 
+  width: 150px;
+  border-bottom: 3px solid yellow;
+}
+.bottom-container-flights{
+  padding:10px 20px;
+}
+.bottom-contatiner-flightes td,
+.bottom-container-flights tr{
+  padding:20px 45px;
+  font-size: 1.3em;
 }

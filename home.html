@@ -6,11 +6,9 @@
   <link rel="stylesheet" href="css/HomePage.css">
   <link rel="icon" href="images/9055475_bxs_plane_alt_icon.png">
   <title>Home-Airport</title>
-  <style>
-   
-  </style>
 </head>
 <body>
+<div style="display: flex;flex-direction: column; min-height:100vh; background-color: #304352;">
   <header>
     <div class="container">
       <div class="header-left-section">
@@ -28,8 +26,8 @@
         <button class="sign-in">Sign In</button>
       </div>
     </div>
-</header>
-  <main>
+  </header>
+  <main style="flex:1;">
     <section class="primary-image-container">
       <div class="main-img">
         <img src="images/GettyImages-172672886.jpg" alt="inside airport">
@@ -93,11 +91,42 @@
                 <input type="text" name="search" id="search" placeholder="Search Arrivals...">
                 <img src="images/211817_search_strong_icon.png" alt="search icon">
               </div>
-              <button>All Flights</button>
+              <button class="all-flights">All Flights</button>
             </div>
           </div>
         </div>
     </section>
   </main>
+  <footer >
+    <div  class="footer-links">
+      <a href="https://www.facebook.com">
+        <button class="footer-button">
+          <img src="images/216078_facebook_social_icon.png" alt="">
+        </button>
+      </a>
+      <a href="https://www.instagram.com">
+        <button class="footer-button">
+          <img src="images/1161953_instagram_icon.png" alt="">
+        </button>
+      </a>
+      <a href="https://www.linkedin.com">
+        <button class="footer-button">
+          <img src="images/216394_linkedin_social_icon.png" alt="">
+        </button>
+      </a>
+    </div>
+    <div class="footer-terms"> 
+      <div>
+        <h3>&#169 2024 Airport.All Rights Reserved</h3>
+      </div>
+      <div class="footer-terms-links">
+        <a href="#">Cookies</a>
+        <a href="#">Privacy Notice</a>
+        <a href="#">Legal</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+</div>
 </body>
 </html>

@@ -17,14 +17,18 @@ html{font-size: 16px;}
     align-items: center;
   }
   .bottom-container-flights .all-flights{
-    width:100% ;
+    width:100%;/*lepuroshi*/
+
+  }
+  .advertisement {
+    flex-direction: column;
   }
 }
 /*--GENERAL--*/
 button,input,.search-bottom-container img{
   cursor: pointer;
 }
-.container,.header-left-section,.header-mid-section,.header-right-section,.search-bottom-container,.top-container-flights,.bottom-container-flights{
+.container,.header-left-section,.header-mid-section,.header-right-section,.search-bottom-container,.top-container-flights,.bottom-container-flights,.advertisement{
   display: flex;
 }
 .header-left-section,.bottom-container-flights,.header-mid-section,.header-right-section{
@@ -37,7 +41,7 @@ button,input,.search-bottom-container img{
 body{
     color: black;
     font-family: 'Times New Roman', Times, serif;
-    padding-bottom: 1000px;
+    
     padding-top: 100px;
 }
 /*--HEADER--*/
@@ -144,7 +148,7 @@ header{
  gap: 1.25em; 
  padding: 0 2em;
  font-size: 1.2em;
- border-bottom: 1px solid rgb(237, 221, 100,0.5);
+ border-bottom: 1px solid #304352;
 }
 .top-container-flights button{
   border: none; 
@@ -159,7 +163,7 @@ header{
 .top-container-flights button:hover,
 .top-container-flights button:active{
   margin-bottom: -5px;
-  border-bottom: 5px solid rgb(237, 221, 100,0.5);
+  border-bottom: 5px solid #304352;
 }
 .table-container-flights{
  margin-top: 15px;
@@ -172,7 +176,7 @@ header{
   font-size: 1rem;
   padding: 0;
 }
-.table-container-flights tr:hover :not(th){
+.table-container-flights tr:hover :not(th){/*how to fix gepat*/
   background-color: rgba(205, 203, 203, 0.2);
 }
 .bottom-container-flights{
@@ -189,12 +193,16 @@ header{
   border:2px solid rgb(207, 200, 200) ;
 }
 .search-bottom-container img{
-  margin-left: -35px;
-  margin-top: 3px;
   height: 30px;
   width: 30px;
 }
-.bottom-container-flights button{
+.search-bottom-container .search-button-submit{
+ border: none;
+ margin-left: -40px;
+ background-color: transparent;
+}
+
+.bottom-container-flights .all-flights{
   border: none;
   width: 20%;
   padding: 0.5em;
@@ -203,12 +211,50 @@ header{
   background-color:rgba(82, 177, 233,0.7);
   font-weight:bold;
 }
-.bottom-container-flights button:hover{
-  color: rgba(82, 177, 233,0.7);
-  background-color:white;
+
+.bottom-container-flights .all-flights:hover{
   box-shadow: 0 0 6px rgba(64, 64, 64, 0.5);
 }
+.all-flights a{
+  text-decoration: none;
+  color: white;
+}
+
+
+/*-----ADVERTISEMENT-----*/
+
+
+.advertisement{
+  
+  margin: 75px 10px;
+  padding: 10px 25px;
+  justify-content: space-evenly;
+  
+}
+.advertisement img{
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 250px;
+  box-shadow: 0 0 6px rgba(64, 64, 64, 0.5);
+}
+.first-advertisement, .second-advertisement, .third-advertisement{
+  padding: 10px;
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  align-items: center;
+}
+.advertisement h3{
+  color:#5f6061;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+
 /*--FOOTER--*/
+
+
 footer{
   display: flex;
   flex-direction: column;

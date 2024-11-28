@@ -96,6 +96,7 @@ header{
 
 /*----MAIN---*/
 .first-site-container{
+  min-width: 1400px;
   color:#3b4044;
   box-shadow: 0 0 6px rgba(64, 64, 64, 0.5);
   padding: 15px;
@@ -118,6 +119,44 @@ header{
   box-shadow: 0 2px 6px rgba(64, 64, 64, 0.5);
 }
 
+.subscribe-faq-container{
+  box-shadow: 0 2px 6px rgba(64, 64, 64, 0.5);
+  margin-top: 50px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.subscribe{
+  width: 600px;
+}
+.subscribe input{
+  border: 1px solid rgba(64, 64, 64, 0.5);
+  width: 80%;
+}
+.subscribe button{
+  margin-left: -57px;
+  background-color: rgb(247, 66, 66);
+  color: white;
+  font-weight: bold;
+  border: 1px solid rgb(247, 66, 66);
+}
+.faq{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.faq h1{
+  margin-bottom: 0;
+}
+.faq a{
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+.faq a:hover{
+  text-decoration: underline;
+  color: rgb(95, 92, 92);
+}
 
 
 /*--FOOTER--*/

@@ -3,11 +3,29 @@ html{font-size: 16px;}
     /*tablet*/
 @media screen and (max-width:992px){
   html{font-size: 14px;}
+
+  .subscribe-faq-container{
+    gap: 2em!important;
+  }
+  .booking-part{
+    flex-wrap: wrap;
+    gap: 1em;
+  }
 }
 /*mobile*/
 
 @media screen and (max-width:768px){
   html{font-size: 12px;}
+  .subscribe-faq-container{
+    flex-direction: column;
+    margin-left: 0!important;
+  }
+  .subscribe{
+    max-width: 90%!important;
+  }
+  .faq{
+    height: 130px;
+  }
 
 }
 /*--GENERAL--*/
@@ -96,7 +114,6 @@ header{
 
 /*----MAIN---*/
 .first-site-container{
-  min-width: 1400px;
   color:#3b4044;
   box-shadow: 0 0 6px rgba(64, 64, 64, 0.5);
   padding: 15px;
@@ -120,38 +137,45 @@ header{
 }
 
 .subscribe-faq-container{
+  background-color: rgb(215, 210, 204,0.3);
   box-shadow: 0 2px 6px rgba(64, 64, 64, 0.5);
-  margin-top: 50px;
+  margin: 75px 0 75px 40px;
   padding: 15px;
   display: flex;
-  justify-content: space-evenly;
+  gap: 4em;
+}
+.subscribe-faq-container h1{
+  margin: 0;
 }
 .subscribe{
-  width: 600px;
+  background-color: white;
+  padding: 15px;
+  width: 480px;
 }
 .subscribe input{
-  border: 1px solid rgba(64, 64, 64, 0.5);
+  border: 1px solid rgba(64, 64, 64, 0.2);
   width: 80%;
 }
 .subscribe button{
-  margin-left: -57px;
+  margin-left: -10px;
   background-color: rgb(247, 66, 66);
   color: white;
   font-weight: bold;
   border: 1px solid rgb(247, 66, 66);
 }
+.subscribe button:hover{
+  box-shadow: 1px 0 2px rgb(247, 66, 66);
+}
 .faq{
   display: flex;
   flex-direction: column;
-  gap: 1em;
-}
-.faq h1{
-  margin-bottom: 0;
+  justify-content: space-between;
+  padding: 15px;
 }
 .faq a{
   text-decoration: none;
   color: black;
-  font-weight: 700;
+  font-size: 1.2em;
 }
 .faq a:hover{
   text-decoration: underline;

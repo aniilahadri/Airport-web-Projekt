@@ -113,7 +113,10 @@ header{
 }
 
 /*----MAIN---*/
+
+/* ---FIRST-CONTAINER-- */
 .first-site-container{
+  background-color: rgb(215, 210, 204,0.1);
   color:#3b4044;
   box-shadow: 0 0 6px rgba(64, 64, 64, 0.5);
   padding: 15px;
@@ -133,8 +136,54 @@ header{
   padding: 5px 20px;
   margin-top: 5px;
   border: none;
-  box-shadow: 0 2px 6px rgba(64, 64, 64, 0.5);
+  box-shadow:  0 2px 3px rgba(64, 64, 64, 0.5);
 }
+
+/*---PARKING CONTAINER--- */
+
+.parking-offer-container{
+  /* background-color: #5f6061; */
+  display: flex;
+  flex-direction:column;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.text-parking h1{
+  margin: 5px 0;
+}
+.text-parking h2{
+  border-bottom: 2px solid rgb(147, 140, 140);
+}
+.parking-suboffer{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  height: 100px;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 1px 1px 4px rgba(64, 64, 64, 0.3);
+  border-radius: 12px;
+}
+.parking-suboffer:hover{
+  box-shadow: 3px 5px 8px rgba(64, 64, 64, 0.3);
+}
+.parking-suboffer .suboffer-second-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.suboffer-second-block img{
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 12px;
+}
+.parking-suboffer button{
+  border: none;
+  padding: 10px;
+}
+
+/* SUBSCRIBE-CONTAINER */
 
 .subscribe-faq-container{
   background-color: rgb(215, 210, 204,0.3);
@@ -181,7 +230,6 @@ header{
   text-decoration: underline;
   color: rgb(95, 92, 92);
 }
-
 
 /*--FOOTER--*/
 

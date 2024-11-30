@@ -22,6 +22,7 @@ html{font-size: 16px;}
     align-items: center;
   }
 }
+/* Search bar display */
 .search-bar-header{
   display: none;
 }
@@ -239,7 +240,7 @@ header{
 
 .advertisement{
   
-  margin: 75px 10px;
+  margin: 50px 10px 75px 10px;
   padding: 10px 25px;
   justify-content: space-evenly;
   

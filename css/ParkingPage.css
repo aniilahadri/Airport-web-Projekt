@@ -26,7 +26,13 @@ html{font-size: 16px;}
   .faq{
     height: 130px;
   }
-
+}
+/* Search bar display */
+.search-bar-header{
+  display: none;
+}
+.search-bar-header:target{
+  display: block;
 }
 /*--GENERAL--*/
 button,input,.parking-suboffer{
@@ -67,6 +73,9 @@ header{
     max-width: 1400px;
     gap:1em
 }
+.header-left-section{
+  height: 79px;
+}
 .header-left-section > a{
     text-decoration: none;
     color: inherit;
@@ -74,7 +83,7 @@ header{
 }
 .header-left-section img{
   padding-bottom: 10px;
-  padding-top: 5px;
+  padding-top: 13px;
 }
 .header-mid-section{
     gap: 2em;
@@ -92,11 +101,19 @@ header{
     opacity: 0.8;
 }
 .header-right-section{
-    width: 180px;
+  min-width: 180px;
 }
 .header-right-section img{
   width:3em;
   height: 3em;
+  padding-top: 5px;
+}
+.header-right-section input{
+  padding: 0.5em;
+  width: 70%;
+  border: 2px solid gray;
+  border-radius: 5px;
+  background-color: transparent;
 }
 .header-right-section .sign-in{
     padding: 0.5em 0.8em;

@@ -32,13 +32,15 @@ html{font-size: 16px;}
 button,input,.parking-suboffer{
   cursor: pointer;
 }
-.container,.header-left-section,.header-mid-section,.header-right-section{
+.container,.header-left-section,.header-mid-section,.header-right-section,.booking-part,.parking-offer-container,.parking-suboffer,
+.suboffer-second-block,.subscribe-faq-container,.faq,footer,.footer-links,.footer-terms,.footer-terms-links{
   display: flex;
 }
 .header-left-section,.header-mid-section,.header-right-section{
   justify-content: space-between;
 }
-.container,.header-left-section,.header-mid-section,.header-right-section{
+.container,.header-left-section,.header-mid-section,.header-right-section,.booking-part,.parking-suboffer,.suboffer-second-block,
+.footer-terms{
   align-items: center;
 }
 /*--BODY--*/
@@ -117,20 +119,17 @@ header{
 /* ---FIRST-CONTAINER-- */
 .first-site-container{
   background-color: rgb(215, 210, 204,0.1);
-  color:#3b4044;
   box-shadow: 0 0 6px rgba(64, 64, 64, 0.5);
   padding: 15px;
 }
 .booking-part{
-  display: flex;
   justify-content: space-evenly;
-  align-content: center;
   margin-bottom: 20px;
 }
 .booking-part label{
   font-size: 1em;
   font-weight: bold;
-  color:#5f6061;
+  color:#404243;
 }
 .booking-part input {
   padding: 5px 20px;
@@ -142,22 +141,19 @@ header{
 /*---PARKING CONTAINER--- */
 
 .parking-offer-container{
-  /* background-color: #5f6061; */
-  display: flex;
   flex-direction:column;
   max-width: 1440px;
   margin: 0 auto;
+  margin-top: 75px;
 }
 .text-parking h1{
   margin: 5px 0;
 }
 .text-parking h2{
-  border-bottom: 2px solid rgb(147, 140, 140);
+  border-bottom: 2px solid rgb(124, 222, 189);
 }
 .parking-suboffer{
-  display: flex;
   justify-content: space-between;
-  align-items:center;
   height: 100px;
   padding: 5px;
   margin: 10px;
@@ -167,10 +163,13 @@ header{
 .parking-suboffer:hover{
   box-shadow: 3px 5px 8px rgba(64, 64, 64, 0.3);
 }
+
+.parking-suboffer h1{
+  color: #5f6061;
+}
+
 .parking-suboffer .suboffer-second-block{
-  display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .suboffer-second-block img{
   width: 40px;
@@ -201,7 +200,6 @@ header{
   box-shadow: 0 2px 6px rgba(64, 64, 64, 0.5);
   margin: 75px 0 75px 40px;
   padding: 15px;
-  display: flex;
   gap: 4em;
 }
 .subscribe-faq-container h1{
@@ -227,7 +225,6 @@ header{
   box-shadow: 1px 0 2px rgb(247, 66, 66);
 }
 .faq{
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 15px;
@@ -246,7 +243,6 @@ header{
 
 
 footer{
-  display: flex;
   flex-direction: column;
   justify-content:space-around;
   height: 100px;
@@ -254,17 +250,13 @@ footer{
   padding: 10px;
 }
 .footer-links{
-  display: flex;
   justify-content: center;
   gap: 1.3em;
 }
 .footer-terms{
-  display: flex; 
   justify-content: space-around; 
-  align-items: center;
 }
 .footer-terms .footer-terms-links{
-  display: flex;
   gap: 1.3em;
   justify-content: space-around;
 }

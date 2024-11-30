@@ -29,7 +29,7 @@ html{font-size: 16px;}
 
 }
 /*--GENERAL--*/
-button,input{
+button,input,.parking-suboffer{
   cursor: pointer;
 }
 .container,.header-left-section,.header-mid-section,.header-right-section{
@@ -175,14 +175,25 @@ header{
 .suboffer-second-block img{
   width: 40px;
   height: 40px;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.05);
   border-radius: 12px;
 }
-.parking-suboffer button{
+
+.parking-suboffer .describe-button{
   border: none;
   padding: 10px;
+  background-color: rgb(124, 222, 189);
+  border-radius: 12px;
+  color: white;
+  font-size:larger;
+  font-weight: bold;
 }
 
+.parking-suboffer .button-of-array{
+  border: none;
+  background-color: transparent;
+
+}
 /* SUBSCRIBE-CONTAINER */
 
 .subscribe-faq-container{

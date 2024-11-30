@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
-    <title>Document</title>
+    <title>Log in-Airport</title>
 </head>
 <body>
+  <div style="display: flex;flex-direction: column; min-height:100vh; ">
   <header>
     <div class="container">
       <div class="header-left-section">
@@ -26,37 +27,66 @@
     </div>
   </header>
   <main style="flex:1;">
-    <section class="primary-image-container">
-      <div class="main-img">
-        <img src="images/GettyImages-172672886.jpg" alt="inside airport">
-      </div>
-    </section>
-
   <div class="form-popup">
     <div class="form-box">
       <div class="form-details">
         <h2>Welcome back</h2>
         <p>Please log in using your personal information to stay connected with us.</p>
+        <img src="images/login.jpg" alt="login-photo">
         </div>
-        <div class="form-content">
+      <div class="form-content">
     <h2>LOGIN</h2>
     <form action="#">
        <div class="input-field">
-        <input type="text" required>
         <label>Email</label>
+        <input type="text" required>
+        
        </div>
        <div class="input-field" >
-        <input type="password" required>
         <label>Password</label>
-        </div>
+        <input type="password" required>
+        
+      </div>
         <a href="#" class="forgot-pass">Forgot password?</a>
         <button type="submit">Log in</button>
         </form>
         <div class="bottom-link">
           Don't have an account?
           <a href="#">Signup</a>
-          </div>
-         
-
+        </div>
+    </div>      
+   </div>      
+  </div>
+  <footer >
+    <div  class="footer-links">
+      <a href="https://www.facebook.com">
+        <button class="footer-button">
+          <img src="images/216078_facebook_social_icon.png" alt="">
+        </button>
+      </a>
+      <a href="https://www.instagram.com">
+        <button class="footer-button">
+          <img src="images/1161953_instagram_icon.png" alt="">
+        </button>
+      </a>
+      <a href="https://www.linkedin.com">
+        <button class="footer-button">
+          <img src="images/216394_linkedin_social_icon.png" alt="">
+        </button>
+      </a>
+    </div>
+    <div class="footer-terms"> 
+      <div>
+        <h3>&#169 2024 Airport.All Rights Reserved</h3>
+      </div>
+      <div class="footer-terms-links">
+        <a href="#">Cookies</a>
+        <a href="#">Privacy Notice</a>
+        <a href="#">Legal</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+</div>
 </body>
 </html>

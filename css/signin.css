@@ -1,0 +1,128 @@
+html{
+    font-size: 16px;
+    color:var(--text-color);
+    text-align: center;
+}
+/* tablet /
+@media screen and (max-width:992px){
+    html{font-size: 14px;}
+  }
+  /mobile*/
+
+  @media screen and (max-width:768px){
+    html{font-size: 12px;}
+:root{
+    --base-color: white;
+    --text-color: #2E2B41;
+    --input-color: #F3F0FF;
+    --accent-color: #ADD8E6;
+
+}
+  }
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-image:linear-gradient(to right, #D3D3D3 ,#ADD8E6);
+    background-size: cover;
+    background-position: right;
+    overflow: hidden;
+}
+.wrapper{
+    box-sizing: border-box;
+    background-color: white;
+    height: 100vh;
+    width: max(40%,600px);
+    padding:10px;
+    border-radius: 0 20px 20pz 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+form{
+    width:min(400px,100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+
+}
+form > div{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+form label{
+    flex-shrink: 0;
+    height: 50px;
+    width:50px;
+    background-color:#ADD8E6 ;
+    fill:white; 
+    border-radius:10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight:500;
+}
+form input{
+    box-sizing:border-box;
+    flex-grow:1;
+    min-width:0;
+    height:50px;
+    padding:1em;
+    border-radius:0 10px 10px 0;
+    border-left: none;
+    border:none;
+    background-color:#F3F0FF;
+    transition: 15ms ease;
+}
+form input:hover{
+    border: 2px solid #ADD8E6;
+}
+form input:focus{
+    outline:none;
+    border-color: #2E2B41;
+}
+div:has(input:focus) > label{
+    background-color: #2E2B41;
+}
+ form input::placeholder{
+    color:#2E2B41;
+ }
+ form button{
+    margin-top:10px;
+    border:none;
+    border-radius:1000px;
+    padding: .85em 4em;
+    background-color:#ADD8E6;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor:pointer;
+    transition: 15ms ease;
+ }
+ form button:hover{
+    background-color: #2E2B41;
+ }
+ form button:focus{
+    outline:none;
+    background-color:#2E2B41;
+ }
+ a{
+    text-decoration:none;
+    color:#ADD8E6;
+ }
+ a:hover{
+    text-decoration: underline;
+ }

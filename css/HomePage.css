@@ -22,13 +22,6 @@ html{font-size: 16px;}
     align-items: center;
   }
 }
-/* Search bar display */
-.search-bar-header{
-  display: none;
-}
-.search-bar-header:target{
-  display: block;
-}
 /*--GENERAL--*/
 button,input,.search-bottom-container img{
   cursor: pointer;
@@ -45,7 +38,7 @@ button,input,.search-bottom-container img{
 /*--BODY--*/
 body{
     color: black;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     
     padding-top: 100px;
 }
@@ -97,6 +90,12 @@ header{
 .header-right-section img{
   width:3em;
   height: 3em;
+}
+.search-bar-header{
+  display: none;
+}
+.search-bar-header:target{
+  display: block;
 }
 
 .header-right-section input{
@@ -190,7 +189,7 @@ header{
   font-size: 1rem;
   padding: 0;
 }
-.table-container-flights tr:hover :not(th){/*how to fix gepat*/
+.table-container-flights tr:hover :not(th){
   background-color: rgba(205, 203, 203, 0.2);
 }
 .bottom-container-flights{
@@ -311,8 +310,3 @@ footer{
   width: 1.8em;
   height: 1.8em;
 }
-
-/*TO DO LIST:
-SEARCHBAR NHEADER,
-FONT FAMILY,
-MI GENERALIZE DO SENE,

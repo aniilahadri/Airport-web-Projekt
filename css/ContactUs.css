@@ -68,6 +68,22 @@ header{
     max-width: 1400px;
     gap:1em
 }
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5%;
+}
+
+
+
+#contact {
+  display: flex;
+  flex-direction: column;
+}
+
 .header-left-section > a{
     text-decoration: none;
     color: inherit;

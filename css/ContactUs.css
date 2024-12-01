@@ -88,7 +88,7 @@ header{
 #contact {
   display: flex;
   flex-direction: column;
-  padding-left: 50px;
+  padding-left: 150px;
   gap: 2em;
   width: 50%;
 }

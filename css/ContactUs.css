@@ -69,19 +69,46 @@ header{
     gap:1em
 }
 
-.contact-container {
+.contact-container{
+  box-shadow: 1px 1px 3px #304352;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin-top: 5%;
+  min-width: 800px;
+  margin-top:100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  min-height: 500px;
 }
-
-
-
 #contact {
   display: flex;
   flex-direction: column;
+  padding-left: 50px;
+  gap: 2em;
+  width: 50%;
+}
+.email-div input,
+.message-div input{
+  margin-top: 15px;
+  border: 1px solid #304352;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 60%;
+}
+#contact button{
+  width: 40%;
+  padding: 10px 0;
+  color: white;
+  background-color: #304352;
+  border: none;
+  border-radius: 99px;
+  font-size: 1.2em;
+  margin-left: 100px;
+}
+#contact label{
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #304352;
 }
 
 .header-left-section > a{

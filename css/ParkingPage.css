@@ -1,0 +1,297 @@
+/*--RESPONSIVE--*/
+html{font-size: 16px;}
+    /*tablet*/
+@media screen and (max-width:992px){
+  html{font-size: 14px;}
+
+  .subscribe-faq-container{
+    gap: 2em!important;
+  }
+  .booking-part{
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+}
+/*mobile*/
+
+@media screen and (max-width:768px){
+  html{font-size: 12px;}
+  .subscribe-faq-container{
+    flex-direction: column;
+    margin-left: 0!important;
+  }
+  .subscribe{
+    max-width: 90%!important;
+  }
+  .faq{
+    height: 130px;
+  }
+}
+/*--GENERAL--*/
+button,input,.parking-suboffer{
+  cursor: pointer;
+}
+.container,.header-left-section,.header-mid-section,.header-right-section,.booking-part,.parking-offer-container,.parking-suboffer,
+.suboffer-second-block,.subscribe-faq-container,.faq,footer,.footer-links,.footer-terms,.footer-terms-links{
+  display: flex;
+}
+.header-left-section,.header-mid-section,.header-right-section{
+  justify-content: space-between;
+}
+.container,.header-left-section,.header-mid-section,.header-right-section,.booking-part,.parking-suboffer,.suboffer-second-block,
+.footer-terms{
+  align-items: center;
+}
+/*--BODY--*/
+body{
+    color: black;
+    font-family: sans-serif;
+    padding-top: 100px;
+}
+/*--HEADER--*/
+header{
+    height: 100px;
+    background-image: linear-gradient(to right, #304352, #d7d2cc);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.container{
+    justify-content: space-around;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1400px;
+    gap:1em
+}
+.header-left-section{
+  height: 79px;
+}
+.header-left-section > a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 2em;
+}
+.header-left-section img{
+  padding-bottom: 10px;
+  padding-top: 13px;
+}
+.header-mid-section{
+    gap: 2em;
+}
+.header-mid-section a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5em;
+    transition: opacity 0.15s,
+    border 0.15s;
+       
+}
+.header-mid-section a:hover{
+    border-bottom: 0.25em solid rgba(255,255,255,0.4);
+    opacity: 0.8;
+}
+.header-right-section{
+  min-width: 180px;
+}
+.header-right-section img{
+  width:3em;
+  height: 3em;
+  padding-top: 5px;
+}
+.header-right-section input{
+  padding: 0.5em;
+  width: 70%;
+  border: 2px solid gray;
+  border-radius: 5px;
+  background-color: transparent;
+}
+.search-bar-header{
+  display: none;
+}
+.search-bar-header:target{
+  display: block;
+}
+.header-right-section .sign-in{
+    padding: 0.5em 0.8em;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 2px 1px 8px rgb(64, 63, 63);
+    font-size: 1.1em;
+    width: 100px;
+    margin-left: 1em;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.2);
+    transition: 0.15s;
+}
+.header-right-section .sign-in:hover{
+    background-color: rgba(255,255,255,0.4) ;
+}
+
+/*----MAIN---*/
+
+/* ---FIRST-CONTAINER-- */
+.first-site-container{
+  background-color: rgb(215, 210, 204,0.1);
+  box-shadow: 0 0 6px rgba(64, 64, 64, 0.5);
+  padding: 15px;
+}
+.booking-part{
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.booking-part label{
+  font-size: 1em;
+  font-weight: bold;
+  color:#404243;
+}
+.booking-part input {
+  padding: 5px 20px;
+  margin-top: 5px;
+  border: none;
+  box-shadow:  0 2px 3px rgba(64, 64, 64, 0.5);
+}
+
+/*---PARKING CONTAINER--- */
+
+.parking-offer-container{
+  flex-direction:column;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 75px;
+}
+.text-parking h1{
+  margin: 5px 0;
+}
+.text-parking h2{
+  border-bottom: 2px solid rgb(124, 222, 189);
+}
+.parking-suboffer{
+  justify-content: space-between;
+  height: 100px;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 1px 1px 4px rgba(64, 64, 64, 0.3);
+  border-radius: 12px;
+}
+.parking-suboffer:hover{
+  box-shadow: 3px 5px 8px rgba(64, 64, 64, 0.3);
+}
+
+.parking-suboffer h1{
+  color: #5f6061;
+}
+
+.parking-suboffer .suboffer-second-block{
+  flex-direction: column;
+}
+.suboffer-second-block img{
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 12px;
+}
+
+.parking-suboffer .describe-button{
+  border: none;
+  padding: 10px;
+  background-color: rgb(124, 222, 189);
+  border-radius: 12px;
+  color: white;
+  font-size:larger;
+  font-weight: bold;
+}
+
+.parking-suboffer .button-of-array{
+  border: none;
+  background-color: transparent;
+
+}
+/* SUBSCRIBE-CONTAINER */
+
+.subscribe-faq-container{
+  background-color: rgb(215, 210, 204,0.3);
+  box-shadow: 0 2px 6px rgba(64, 64, 64, 0.5);
+  margin: 75px 0 75px 40px;
+  padding: 15px;
+  gap: 4em;
+}
+.subscribe-faq-container h1{
+  margin: 0;
+}
+.subscribe{
+  background-color: white;
+  padding: 15px;
+  width: 480px;
+}
+.subscribe input{
+  border: 1px solid rgba(64, 64, 64, 0.2);
+  width: 80%;
+}
+.subscribe button{
+  margin-left: -10px;
+  background-color: rgb(247, 66, 66);
+  color: white;
+  font-weight: bold;
+  border: 1px solid rgb(247, 66, 66);
+}
+.subscribe button:hover{
+  box-shadow: 1px 0 2px rgb(247, 66, 66);
+}
+.faq{
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+.faq a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+}
+.faq a:hover{
+  text-decoration: underline;
+  color: rgb(95, 92, 92);
+}
+
+/*--FOOTER--*/
+
+
+footer{
+  flex-direction: column;
+  justify-content:space-around;
+  height: 100px;
+  background-image: linear-gradient(to right, #304352, #d7d2cc);
+  padding: 10px;
+}
+.footer-links{
+  justify-content: center;
+  gap: 1.3em;
+}
+.footer-terms{
+  justify-content: space-around; 
+}
+.footer-terms .footer-terms-links{
+  gap: 1.3em;
+  justify-content: space-around;
+}
+.footer-terms-links a{
+  text-decoration: none;
+  color: rgb(59, 59, 215);
+}
+.footer-terms-links a:hover{
+  text-decoration: underline;
+  color: rgb(33, 33, 120);
+}
+.footer-button {
+  border: none;
+  padding: 5px;
+  border-radius:100px;
+  background-color: transparent;
+  box-shadow: 0 0 6px rgba(64, 64, 64, 0.5);
+}
+.footer-button img{
+  width: 1.8em;
+  height: 1.8em;
+}

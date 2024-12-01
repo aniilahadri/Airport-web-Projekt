@@ -32,17 +32,17 @@
     </header>
 
 
-    <main>
+    <main style="flex:1">
       <div class="contact-container">
-        <form id="contact">
+        <form action="/" id="contact">
           <p id="error-message"></p>
-          <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+          <div class="email-div">
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="johndoe@email.com">
           </div>
-          <div>
-            <label for="message">Your message</label>
-            <input type="textarea" id="message" name="message">
+          <div class="message-div">
+            <label for="message">Your message</label><br>
+            <input type="textarea" id="message" name="message" placeholder="I need...">
           </div>
           <button type="submit">Send message</button>
         </form>

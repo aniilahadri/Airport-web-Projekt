@@ -126,3 +126,12 @@ div:has(input:focus) > label{
  a:hover{
     text-decoration: underline;
  }
+ form div.incorrent label{
+    background-color: red;
+ }
+ form div.incorrect input{
+    border-color: red;
+ }
+ #error-message{
+    color: red;
+ }

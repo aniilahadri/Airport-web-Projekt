@@ -5,76 +5,74 @@ const password_input = document.getElementById('password-input')
 const repeat_password_input = document.getElementById('repeat-password-input')
 const error_message = document.getElementById('error-message')
 
-form.addEventListener('submit',(e)=>{
-    //  e.preventDefault() --prevent submit
+const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
 
+
+form.addEventListener('submit',(e)=>{
+    error_message.innerText = ''
     let errors =[]
 
-    if(firstname_input){
-        //we will use the same js file so for log in and sign up the diff are firstname and repeat pass
+    if(firstname_input) {
         errors= getSignupFormErrors(firstname_input.value, email_input.value, password_input.value, repeat_password_input.value)
     }
-    else{
-        //if we dont have a fistname we are in log in
-
+    else {
         errors= getLoginFormErrors(email_input.value, password_input.value)
     }
 
-
-    if(errors.length > 0){
-        //if there are any errors
-    e.preventDefault()
-    error_message.innerText = errors.join(". ")
+    if(errors.length > 0) {
+        e.preventDefault()
+        error_message.innerText = errors.join(". ")
     }
 })
 
 function getSignupFormErrors(firstname, email, password, repeatPassword){
     let errors=[]
 
-if(firstname === '' || firstname == null){
-    errors.push('Firstname is required')
-     firstname_input.parentElement.classList.add('incorrect')
-}
-if(email === '' || email == null){
-    errors.push('Email is required')
-     email_input.parentElement.classList.add('incorrect')
-}
-if(password === '' || password == null){
-    errors.push('Password is required')
-     password_input.parentElement.classList.add('incorrect')
-}
-if(password.length < 8){
-    errors.push('Password must have at least 8 characters')
-    password_input.parentElement.classList.add('incorrect')
-}
-if(password !== repeatPassword){
-    errors.push('Password does not match repeated password')
-   repeat_password_input.parentElement.classList.add('incorrect')
+    if(firstname === '' || firstname == null){
+        errors.push('Firstname is required')
+    }
+    if(email === '' || email == null){
+        errors.push('Email is required')
+    }
+
+    if(!emailRegex.test(email)) {
+        errors.push("Email is not valid")
+    }
+
+    if(password === '' || password == null){
+        errors.push('Password is required')
+    }
+
+    if(password.length < 8){
+        errors.push('Password must have at least 8 characters')
+    }
+
+    if(password !== repeatPassword){
+        errors.push('Password does not match repeated password')
+    }
+
+    return errors;
 }
 
-return errors;
-}
 function getLoginFormErrors(email, password){
     let errors = []
 
-    if(email === '' || email == null){
+    if(email === '' || email == null) {
         errors.push('Email is required')
-         email_input.parentElement.classList.add('incorrect')
     }
-    if(password === '' || password == null){
+
+    if(!emailRegex.test(email)) {
+        errors.push("Email is not valid")
+    }
+
+    if(password === '' || password == null) {
         errors.push('Password is required')
-         password_input.parentElement.classList.add('incorrect')
     }
+
+    if(password.length < 8) {
+        errors.push("Password should be at least 8 characters")
+    }
+
     return errors;
 
 }
-const allInputs = [firstname_input, email_input, password_input, repeat_password_input]
-
-allInputs.forEach(input => {
-    input.addEventListener('input', () =>{
-        if(input.parentElement.classList.contains('incorrect')){
-            input.parentElement.classList.remove('incorrect')
-            error_message.innerText = ''
-        }
-    })
-})

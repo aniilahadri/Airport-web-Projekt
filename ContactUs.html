@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/ContactUs.css">
     <link rel="icon" href="images/9055475_bxs_plane_alt_icon.png">
+    <script defer src="contact-validation.js"></script>
     <title>Contact us-Airport</title>
 </head>
 <body>
@@ -33,7 +34,8 @@
 
     <main>
       <div class="contact-container">
-        <form action="/" id="contact">
+        <form id="contact">
+          <p id="error-message"></p>
           <div>
             <label for="email">Email</label>
             <input type="email" name="email" id="email">
@@ -43,7 +45,6 @@
             <input type="textarea" id="message" name="message">
           </div>
           <button type="submit">Send message</button>
-          
         </form>
       </div>
     </main>

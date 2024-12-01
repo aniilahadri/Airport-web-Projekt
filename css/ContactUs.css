@@ -77,7 +77,9 @@ header{
   margin-top: 5%;
 }
 
-
+#error-message{
+  color: red;
+}
 
 #contact {
   display: flex;

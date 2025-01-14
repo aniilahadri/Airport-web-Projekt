@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/ContactUs.css">
+    <link rel="icon" href="images/9055475_bxs_plane_alt_icon.png">
+    <script defer src="contact-validation.js"></script>
+    <title>Contact us-Airport</title>
+</head>
+<body>
+  <div style="display: flex;flex-direction: column; min-height:100vh; ">
+    <header>
+      <div class="container">
+        <div class="header-left-section">
+          <a href="home.html"><img src="images/9055475_bxs_plane_alt_icon.png" alt="icon-plane"></a>
+          <a href="home.html">Airport</a>
+        </div>
+        <div class="header-mid-section">
+          <a href="Flights.html">Flights</a>
+          <a href="parking.html">Parking</a>
+          <a href="ContactUs.html">Contact us</a>
+          <a href="#">About Us</a>
+        </div>
+        <div class="header-right-section">
+          <a href="#search-div"><img src="images/211817_search_strong_icon.png" alt="search icon"></a>
+          <input type="text" class="search-bar-header" id="search-div" placeholder="Search...">
+          <button class="sign-in">Sign In</button>
+        </div>
+      </div>
+    </header>
+
+
+    <main style="flex:1">
+      <div class="contact-container">
+        <form id="contact">
+          <p id="error-message"></p>
+          <div class="email-div">
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="johndoe@email.com">
+          </div>
+          <div class="message-div">
+            <label for="message">Your message</label><br>
+            <input type="textarea" id="message" name="message" placeholder="I need...">
+          </div>
+          <button type="submit">Send message</button>
+        </form>
+      </div>
+    </main>
+
+
+    <footer>
+      <div class="footer-links">
+        <a href="https://www.facebook.com">
+          <button class="footer-button">
+            <img src="images/216078_facebook_social_icon.png" alt="">
+          </button>
+        </a>
+        <a href="https://www.instagram.com">
+          <button class="footer-button">
+            <img src="images/1161953_instagram_icon.png" alt="">
+          </button>
+        </a>
+        <a href="https://www.linkedin.com">
+          <button class="footer-button">
+            <img src="images/216394_linkedin_social_icon.png" alt="">
+          </button>
+        </a>
+      </div>
+      <div class="footer-terms"> 
+        <div>
+          <h3>&#169 2024 Airport.All Rights Reserved</h3>
+        </div>
+        <div class="footer-terms-links">
+          <a href="#">Cookies</a>
+          <a href="#">Privacy Notice</a>
+          <a href="#">Legal</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -75,8 +75,7 @@ header{
     font-size: 2em;
 }
 .header-left-section img{
-  padding-bottom: 10px;
-  padding-top: 13px;
+  padding-top: 3px;
 }
 .header-mid-section{
     gap: 2em;

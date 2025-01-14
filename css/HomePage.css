@@ -66,8 +66,7 @@ header{
     font-size: 2em;
 }
 .header-left-section img{
-  padding-bottom: 10px;
-  padding-top: 5px;
+  padding-top: 3px;
 }
 .header-mid-section{
     gap: 2em;
@@ -90,14 +89,11 @@ header{
 .header-right-section img{
   width:3em;
   height: 3em;
+  padding-top: 5px;
 }
 .search-bar-header{
   display: none;
 }
-.search-bar-header:target{
-  display: block;
-}
-
 .header-right-section input{
   padding: 0.5em;
   width: 70%;
@@ -162,6 +158,9 @@ header{
  padding: 0 2em;
  font-size: 1.2em;
  border-bottom: 1px solid #304352;
+}
+.departureTable{
+  display: none;
 }
 .top-container-flights button{
   border: none; 

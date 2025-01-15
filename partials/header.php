@@ -13,8 +13,8 @@
       <div class="header-right-section">
         <img src="../images/211817_search_strong_icon.png" alt="search icon" class="searchBar" style="cursor: pointer;">
         <input type="text" class="search-bar-header" id="search-div" placeholder="Search...">
-        <a href="../controllers/login.php">
-            <button class="sign-in">Sign In</button>
+        <a href="../controllers/signin.php">
+            <button class="sign-in">Sign Up</button>
         </a>
       </div>
     </div>

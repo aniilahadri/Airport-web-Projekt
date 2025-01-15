@@ -4,7 +4,7 @@ html{
 }
 body{
     font-family: sans-serif;
-    background-image: linear-gradient(to right, #304352, #d7d2cc);
+    /* background-image: linear-gradient(to right, #304352, #d7d2cc); */
     background-size: cover;
     background-position: right;
     overflow: hidden;
@@ -32,14 +32,14 @@ header{
     left: 0;
     right: 0;
     z-index: 1000;
-    box-shadow: 0 4px 0 -2px rgba(0, 0, 0, 0.7);
+    /* box-shadow: 0 4px 0 -2px rgba(0, 0, 0, 0.7); */
 }
 .container{
     justify-content: space-around;
     margin: 0 auto;
     height: 100%;
     max-width: 1400px;
-    gap:1em
+    gap:1em;
 }
 .header-left-section > a{
     text-decoration: none;
@@ -98,18 +98,21 @@ header{
 .header-right-section .sign-in:hover{
     background-color: rgba(255,255,255,0.4) ;
 }
+
+/* main */
 .wrapper{
     box-sizing: border-box;
     background-color: white;
-    height: 100vh;
-    margin: 100px auto 0;
-    width: max(40%,600px);
+    height: 900px;
+    margin: 150px auto 50px;
+    width: max(40%,37.5em);
     padding:10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 2px 0 2px 1px rgba(64, 64, 64, 0.5);
 }
 h1{
     font-size: 3rem;
@@ -208,7 +211,7 @@ footer{
     height: 100px;
     background-image: linear-gradient(to right, #304352, #d7d2cc);
     padding: 10px;
-    box-shadow: 0 -4px 0 -2px rgba(0, 0, 0, 0.7);
+    /* box-shadow: 0 -4px 0 -2px rgba(0, 0, 0, 0.7); */
   }
   .footer-links{
     display: flex;

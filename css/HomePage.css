@@ -22,6 +22,9 @@ html{font-size: 16px;}
     align-items: center;
   }
 }
+@media screen and (max-width:500px) {
+  html{font-size: 10px;}
+}
 /*--GENERAL--*/
 button,input,.search-bottom-container img{
   cursor: pointer;
@@ -177,12 +180,19 @@ header{
   margin-bottom: -5px;
   border-bottom: 5px solid #304352;
 }
+.body-container {
+  display: flex;
+  flex-direction: column;
+  gap: -0,125em;
+}
 .table-container-flights{
  margin-top: 15px;
+ min-height: 19.6875em;
 }
 .table-container-flights td{
   font-size: 1rem;
-  padding:0.625em 3.125em;
+  text-align: center;
+  padding: 1.23em 2.5em;
 }
 .table-container-flights tr{
   font-size: 1rem;

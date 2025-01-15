@@ -5,9 +5,9 @@ html{
 body{
     font-family: sans-serif;
     /* background-image: linear-gradient(to right, #304352, #d7d2cc); */
-    background-size: cover;
+    /* background-size: cover;
     background-position: right;
-    overflow: hidden;
+    overflow: hidden; */
 }
 /*--GENERAL--*/
 button,input,.search-bottom-container img{
@@ -103,10 +103,10 @@ header{
 .wrapper{
     box-sizing: border-box;
     background-color: white;
-    height: 900px;
+    min-height: 550px;
     margin: 150px auto 50px;
     width: max(40%,37.5em);
-    padding:10px;
+    padding:30px 15px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;

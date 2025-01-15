@@ -1,6 +1,5 @@
 <?php
 require BASE_PATH . "partials/head.php";?>
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
   <script type="text/javascript" src="validation.js" defer></script>
   <style>
     .unhidden{

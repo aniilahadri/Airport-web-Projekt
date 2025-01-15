@@ -26,109 +26,57 @@ require BASE_PATH . "partials/head.php";
             <button id="arrivalButton">Arrivals</button>
             <button id="departureButton">Departures</button>
           </div>
-          <div class="table-container-flights">
-            <table id="arrivalTable">
-              <tr>
-                <th>Time</th>
-                <th colspan="2">Destination</th>
-                <th colspan="2">Airline</th>
-                <th>Flight id</th>
-                <th>Status</th>
-              </tr>
-              <tr>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>In Time</td>
-              </tr>
-              <tr>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>In Time</td>
-              </tr>
-              <tr>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>Delayed</td>
-              </tr>
-              <tr>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>In Time</td>
-              </tr>
-              <tr>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>Delayed</td>
-              </tr>
-            </table>
-            <table id="departureTable" class="departureTable">
-              <tr>
-                <th>Time</th>
-                <th colspan="2">Destination</th>
-                <th colspan="2">Airline</th>
-                <th>Flight id</th>
-                <th>Status</th>
-              </tr>
-              <tr>
-                <td>02:00</td>
-                <td colspan="2">Turkey</td>
-                <td colspan="2">Koso Airline</td>
-                <td>W8 1001</td>
-                <td>In Time</td>
-              </tr>
-              <tr>
-                <td>02:05</td>
-                <td colspan="2">Turkey</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>In Time</td>
-              </tr>
-              <tr>
-                <td>02:05</td>
-                <td colspan="2">Paris</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>Delayed</td>
-              </tr>
-              <tr>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>In Time</td>
-              </tr>
-              <tr>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>Delayed</td>
-              </tr>
-            </table>
+          <div class="body-container">
+            <div class="table-container-flights">
+              <table id="arrivalTable">
+                <tr>
+                  <th>Time</th>
+                  <th colspan="2">Destination</th>
+                  <th colspan="2">Airline</th>
+                  <th>Flight id</th>
+                  <th>Status</th>
+                </tr>
+                <?php for($x=0;$x<5;$x++) :?>
+                <tr>
+                  <td><?=$arrivals[$x]['Time']?></td>
+                  <td colspan="2"><?=$arrivals[$x]['Destination']?></td>
+                  <td colspan="2"><?=$arrivals[$x]['Airline']?></td>
+                  <td><?=$arrivals[$x]['Flight_Id']?></td>
+                  <td><?=$arrivals[$x]['Status']?></td>
+                </tr>
+                <?php endfor;?>
+              </table>
+              <table id="departureTable" class="departureTable">
+                <tr>
+                  <th>Time</th>
+                  <th colspan="2">Destination</th>
+                  <th colspan="2">Airline</th>
+                  <th>Flight id</th>
+                  <th>Status</th>
+                </tr>
+                <?php for($x=0;$x<5;$x++) :?>
+                <tr>
+                  <td><?=$departures[$x]['Time']?></td>
+                  <td colspan="2"><?=$departures[$x]['Destination']?></td>
+                  <td colspan="2"><?=$departures[$x]['Airline']?></td>
+                  <td><?=$departures[$x]['Flight_Id']?></td>
+                  <td><?=$departures[$x]['Status']?></td>
+                </tr>
+                <?php endfor;?>
+              </table>
             </div>
-            <div class="bottom-container-flights">
-              <div class="search-bottom-container">
-                <input type="text" name="submit-search" id="search" placeholder="Search Arrivals...">
-                <button type="submit" name="sumbit-search" class="search-button-submit"><img src="../images/211817_search_strong_icon.png" alt="search icon"></button>
+              <div class="bottom-container-flights">
+                <div class="search-bottom-container">
+                  <input type="text" name="submit-search" id="search" placeholder="Search Arrivals...">
+                  <button type="submit" name="sumbit-search" class="search-button-submit"><img src="../images/211817_search_strong_icon.png" alt="search icon"></button>
+                </div>
+                <?php if ($_SESSIONS['user'] ?? false) : ?>
+                <button class="all-flights"><a href="Flights.html">All Flights</a></button>
+                <?php else :?>
+                <button class="all-flights"><a href="Flights.html">All Flights</a></button>
+                <?php endif; ?>
               </div>
-              <?php if ($_SESSIONS['user'] ?? false) : ?>
-              <button class="all-flights"><a href="Flights.html">All Flights</a></button>
-              <?php else :?>
-              <button class="all-flights"><a href="Flights.html">All Flights</a></button>
-              <?php endif; ?>
-            </div>
           </div>
-        
     </section>
     <section>
       <div class="advertisement">

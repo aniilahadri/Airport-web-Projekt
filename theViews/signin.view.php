@@ -1,6 +1,5 @@
 <?php
 require BASE_PATH . "partials/head.php";?>
-<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 <link rel="icon" href="images/9055475_bxs_plane_alt_icon.png">
   <style>
     .unhidden{
@@ -47,7 +46,7 @@ require BASE_PATH . "partials/head.php";?>
     <p>Already have an account? <a href="../controllers/login.php">Login</a></p>
   </div>
 
-  <?php require BASE_PATH . 'partials/footer.php'?>  
+  <?php require BASE_PATH . 'partials/footer.php'?> 
   <script>
   const searchBar = document.querySelector('.searchBar');
   const searchIcon = document.querySelector('#search-div');

@@ -4,12 +4,33 @@ html{font-size: 16px;}
     /*tablet*/
 @media screen and (max-width:992px){
   html{font-size: 14px;}
+  .container-flights {
+    max-width: 65em!important;
+  }
+  .table-container-flights td{
+    padding:1.8em 1.8em!important;
+  }
 }
 /*mobile*/
 
 @media screen and (max-width:768px){
   html{font-size: 12px;}
+  .container-flights {
+    max-width: 57.16em!important;
+  }
+  .table-container-flights td{
+    padding:1.5em 1.6em!important;
+  }
   
+}
+@media screen and (max-width:600px) {
+  html{font-size: 9px;}
+  .container-flights {
+    max-width: 100%!important;
+  }
+  .table-container-flights td{
+    padding:1.4em 1.5em!important;
+  }
 }
 
 
@@ -157,8 +178,8 @@ header{
 .container-flights{
  background-color:white;
  box-shadow: 0 0 6px rgba(64, 64, 64, 0.5);
- width: 90.625em;/*1450px*/
- max-height: 20000px;
+ max-width: 90.625em;/*1450px*/
+ max-height: 2000px;
  margin: 0 auto; 
  position: relative;
 }
@@ -191,7 +212,7 @@ header{
  }
  .table-container-flights td{
    font-size: 1.1rem;
-   padding:1.875em 4.375em;/*30px 70px*/
+   padding:1.875em 3.6em;
  }
  .table-container-flights tr{
    font-size: 1.3rem;

@@ -36,123 +36,17 @@ require BASE_PATH . "partials/head.php";?>
                 <th>Status</th>
                 <th>Details</th>
               </tr>
+              <?php foreach($arrivals as $arrival) :?>
               <tr>
-                <td>30/12/2024</td>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>In Time</td>
+                <td><?=$arrival['Date']?></td>
+                <td><?=$arrival['Time']?></td>
+                <td colspan="2"><?=$arrival['Destination']?></td>
+                <td colspan="2"><?=$arrival['Airline']?></td>
+                <td><?=$arrival['Flight_Id']?></td>
+                <td><?=$arrival['Status']?></td>
                 <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
               </tr>
-              <tr>
-                <td>30/12/2024</td>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>In Time</td>
-                <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
-              </tr>
-              <tr>
-                <td>30/12/2024</td>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>Delayed</td>
-                <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
-              </tr>
-              <tr>
-                <td>30/12/2024</td>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>In Time</td>
-                <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
-              </tr>
-              <tr>
-                <td>30/12/2024</td>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>Delayed</td>
-                <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
-              </tr>
-              <tr>
-                <td>30/12/2024</td>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>Delayed</td>
-                <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
-              </tr>
-              <tr>
-                <td>30/12/2024</td>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>Delayed</td>
-                <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
-              </tr>
-              <tr>
-                <td>30/12/2024</td>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>In Time</td>
-                <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
-              </tr>
-              <tr>
-                <td>30/12/2024</td>
-                <td>02:05</td>
-                <td colspan="2">London</td>
-                <td colspan="2">Turkish Airline</td>
-                <td>W8 1001</td>
-                <td>Delayed</td>
-                <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
-                <tr>
-                  <td>30/12/2024</td>
-                  <td>02:05</td>
-                  <td colspan="2">London</td>
-                  <td colspan="2">Turkish Airline</td>
-                  <td>W8 1001</td>
-                  <td>In Time</td>
-                  <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
-                </tr>
-                <tr>
-                  <td>30/12/2024</td>
-                  <td>02:05</td>
-                  <td colspan="2">London</td>
-                  <td colspan="2">Turkish Airline</td>
-                  <td>W8 1001</td>
-                  <td>In Time</td>
-                  <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
-                </tr>
-                <tr>
-                  <td>30/12/2024</td>
-                  <td>02:05</td>
-                  <td colspan="2">London</td>
-                  <td colspan="2">Turkish Airline</td>
-                  <td>W8 1001</td>
-                  <td>Delayed</td>
-                  <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
-                </tr>
-                <tr>
-                  <td>30/12/2024</td>
-                  <td>02:05</td>
-                  <td colspan="2">London</td>
-                  <td colspan="2">Turkish Airline</td>
-                  <td>W8 1001</td>
-                  <td>Delayed</td>
-                  <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
-                </tr>
-              </tr>
+              <?php endforeach; ?>
             </table>
           </div>
       </main>

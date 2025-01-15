@@ -22,11 +22,33 @@ require BASE_PATH . "partials/head.php";?>
         <div class="overlay"></div>
           <div class="container-flights">
           <div class="top-container-flights" > 
-            <button>Arrivals</button>
-            <button>Departures</button>
+            <button id="arrivalButton">Arrivals</button>
+            <button id="departureButton">Departures</button>
           </div>
           <div class="table-container-flights">
-            <table >
+          <table id="arrivalTable">
+              <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th colspan="2">Destination</th>
+                <th colspan="2">Airline</th>
+                <th>Flight id</th>
+                <th>Status</th>
+                <th>Details</th>
+              </tr>
+              <?php foreach($departures as $departure) :?>
+              <tr>
+                <td><?=$departure['Date']?></td>
+                <td><?=$departure['Time']?></td>
+                <td colspan="2"><?=$departure['Destination']?></td>
+                <td colspan="2"><?=$departure['Airline']?></td>
+                <td><?=$departure['Flight_Id']?></td>
+                <td><?=$departure['Status']?></td>
+                <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
+              </tr>
+              <?php endforeach; ?>
+            </table>
+            <table id="departureTable" class="departureTable">
               <tr>
                 <th>Date</th>
                 <th>Time</th>
@@ -55,8 +77,22 @@ require BASE_PATH . "partials/head.php";?>
   <script>
   const searchBar = document.querySelector('.searchBar');
   const searchIcon = document.querySelector('#search-div');
+  const departureTable =document.querySelector('#departureTable');
+  const departureButton =document.querySelector('#departureButton');
+  const arrivalTable =document.querySelector('#arrivalTable');
+  const arrivalButton =document.querySelector('#arrivalButton');
 
   searchBar.addEventListener('click',hiddenSearch);
+
+  departureButton.addEventListener('click',() => {
+    arrivalTable.classList.add('hidden'); 
+    departureTable.classList.add('unhidden');
+  });
+
+  arrivalButton.addEventListener('click',() => {
+    departureTable.classList.remove('unhidden'); 
+    arrivalTable.classList.remove('hidden');
+  });
 
   function hiddenSearch () {
     searchIcon.classList.toggle('unhidden');

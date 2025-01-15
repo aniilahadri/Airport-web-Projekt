@@ -22,8 +22,11 @@ html{font-size: 16px;}
     align-items: center;
   }
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:600px) {
   html{font-size: 10px;}
+  .container-flights {
+    width: 100%!important;
+  }
 }
 /*--GENERAL--*/
 button,input,.search-bottom-container img{

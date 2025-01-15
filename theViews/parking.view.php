@@ -15,22 +15,25 @@
           <h3 align="center">There is currently limited availability for new car park bookings.</h3>
         </div>
         <div class="booking-part">
-          <div class="input-part">
-            <label for="entry-date">Entry Date</label><br>
-            <input type="date" id="entry-date" name="entry-date">
-          </div>
-          <div class="input-part">
-            <label for="entry-time">Entry Time</label><br>
-            <input type="time" id="entry-time" name="entry-time">
-          </div>
-          <div class="input-part">
-            <label for="leaving-date">Leaving Date</label><br>
-            <input type="date" id="leaving-date" name="leaving-date">
-          </div>
-          <div class="input-part">
-            <label for="leaving-time">Leaving Time</label><br>
-            <input type="time" id="leaving-time" name="leaving-time">
-          </div>
+          <form action="" method="post">
+            <div class="input-part">
+              <label for="entry-date">Entry Date</label><br>
+              <input type="date" id="entry-date" name="entry-date">
+            </div>
+            <div class="input-part">
+              <label for="entry-time">Entry Time</label><br>
+              <input type="time" id="entry-time" name="entry-time">
+            </div>
+            <div class="input-part">
+              <label for="leaving-date">Leaving Date</label><br>
+              <input type="date" id="leaving-date" name="leaving-date">
+            </div>
+            <div class="input-part">
+              <label for="leaving-time">Leaving Time</label><br>
+              <input type="time" id="leaving-time" name="leaving-time">
+            </div>
+            <button type="submit">Reserve</button>
+          </form>
         </div>
       </section>
 

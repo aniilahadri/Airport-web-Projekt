@@ -13,39 +13,42 @@ require BASE_PATH . "partials/head.php";?>
 <body>
 <div style="display: flex;flex-direction: column; max-height:100vh; ">
   <?php require BASE_PATH . "partials/header.php"?>
-  <div class="wrapper">
-    <h1>Sign up</h1>
-    <p id="error-message"></p>
-    <form id="form">
-      <div>
-        <label for="firstname-input">
-          <img src="../images/1564534_customer_man_user_account_profile_icon.png" alt="user" height="24px">
-        </label>
-        <input type="text" name="firstname" id="firstname-input" placeholder="Firstname">
+  <main style="flex:1">
+    <div class="wrapper">
+      <h1>Sign up</h1>
+      <p id="error-message"></p>
+      <form id="form">
+        <div>
+          <label for="firstname-input">
+            <img src="../images/1564534_customer_man_user_account_profile_icon.png" alt="user" height="24px">
+          </label>
+          <input type="text" name="firstname" id="firstname-input" placeholder="Firstname">
+        </div>
+        <div>
+          <label for="email-input">
+            <img src="../images/134146_mail_email_icon.png" height="24px" alt="email">
+          </label>
+          <input type="email" name="email" id="email-input" placeholder="Email">
+        </div>
+        <div>
+          <label for="password-input">
+            <img src="../images/3669338_lock_ic_icon.png" height="24px" alt="lock">
+          </label>
+          <input type="password" name="password" id="password-input" placeholder="Password">
+        </div>
+        <div>
+          <label for="repeat-password-input">
+            <img src="../images/3669338_lock_ic_icon.png" height="24px" alt="lock">
+          </label>
+          <input type="password" name="repeat-password" id="repeat-password-input" placeholder="Repeat Password">
+        </div>
+        <button type="submit">Signup</button>
+      </form>
+      <div class="link">
+        <p>Already have an account? <a href="../controllers/login.php">Login</a></p>
       </div>
-      <div>
-        <label for="email-input">
-          <img src="../images/134146_mail_email_icon.png" height="24px" alt="email">
-        </label>
-        <input type="email" name="email" id="email-input" placeholder="Email">
-      </div>
-      <div>
-        <label for="password-input">
-          <img src="../images/3669338_lock_ic_icon.png" height="24px" alt="lock">
-        </label>
-        <input type="password" name="password" id="password-input" placeholder="Password">
-      </div>
-      <div>
-        <label for="repeat-password-input">
-          <img src="../images/3669338_lock_ic_icon.png" height="24px" alt="lock">
-        </label>
-        <input type="password" name="repeat-password" id="repeat-password-input" placeholder="Repeat Password">
-      </div>
-      <button type="submit">Signup</button>
-    </form>
-    <p>Already have an account? <a href="../controllers/login.php">Login</a></p>
-  </div>
-
+    </div>
+  </main>
   <?php require BASE_PATH . 'partials/footer.php'?> 
   <script>
   const searchBar = document.querySelector('.searchBar');

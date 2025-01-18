@@ -8,7 +8,7 @@
         <a href="../controllers/flights.php">Flights</a>
         <a href="../controllers/parking.php">Parking</a>
         <a href="../controllers/contact.php">Contact Us</a>
-        <a href="#">About Us</a>
+        <a href="../controllers/aboutus.php">About Us</a>
       </div>
       <div class="header-right-section">
         <img src="../images/211817_search_strong_icon.png" alt="search icon" class="searchBar" style="cursor: pointer;">
@@ -35,7 +35,7 @@
           <a href="../controllers/contact.php">Contact Us</a>
         </li>
         <li>
-          <a href="#">About Us</a>
+          <a href="../controllers/aboutus.php">About Us</a>
         </li>
       </ul>
     </div>

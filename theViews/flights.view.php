@@ -36,14 +36,14 @@ require BASE_PATH . "partials/head.php";?>
                 <th>Status</th>
                 <th>Details</th>
               </tr>
-              <?php foreach($departures as $departure) :?>
+              <?php foreach($arrivals as $arrival) :?>
               <tr>
-                <td><?=$departure['Date']?></td>
-                <td><?=$departure['Time']?></td>
-                <td colspan="2"><?=$departure['Destination']?></td>
-                <td colspan="2"><?=$departure['Airline']?></td>
-                <td><?=$departure['Flight_Id']?></td>
-                <td><?=$departure['Status']?></td>
+                <td><?=$arrival['Date']?></td>
+                <td><?=$arrival['Time']?></td>
+                <td colspan="2"><?=$arrival['Destination']?></td>
+                <td colspan="2"><?=$arrival['Airline']?></td>
+                <td><?=$arrival['Flight_Id']?></td>
+                <td><?=$arrival['Status']?></td>
                 <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
               </tr>
               <?php endforeach; ?>
@@ -58,14 +58,14 @@ require BASE_PATH . "partials/head.php";?>
                 <th>Status</th>
                 <th>Details</th>
               </tr>
-              <?php foreach($arrivals as $arrival) :?>
+              <?php foreach($departures as $departure) :?>
               <tr>
-                <td><?=$arrival['Date']?></td>
-                <td><?=$arrival['Time']?></td>
-                <td colspan="2"><?=$arrival['Destination']?></td>
-                <td colspan="2"><?=$arrival['Airline']?></td>
-                <td><?=$arrival['Flight_Id']?></td>
-                <td><?=$arrival['Status']?></td>
+                <td><?=$departure['Date']?></td>
+                <td><?=$departure['Time']?></td>
+                <td colspan="2"><?=$departure['Destination']?></td>
+                <td colspan="2"><?=$departure['Airline']?></td>
+                <td><?=$departure['Flight_Id']?></td>
+                <td><?=$departure['Status']?></td>
                 <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
               </tr>
               <?php endforeach; ?>
@@ -81,6 +81,13 @@ require BASE_PATH . "partials/head.php";?>
   const departureButton =document.querySelector('#departureButton');
   const arrivalTable =document.querySelector('#arrivalTable');
   const arrivalButton =document.querySelector('#arrivalButton');
+  const hamburger = document.querySelector('.hamburger');
+
+  hamburger.onclick = function() {
+    let navBar = document.querySelector('.nav-bar-mobile');
+    navBar.classList.toggle("active");
+  }
+
 
   searchBar.addEventListener('click',hiddenSearch);
 

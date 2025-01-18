@@ -71,9 +71,9 @@ require BASE_PATH . "partials/head.php";
                   <button type="submit" name="sumbit-search" class="search-button-submit"><img src="../images/211817_search_strong_icon.png" alt="search icon"></button>
                 </div>
                 <?php if ($_SESSIONS['user'] ?? false) : ?>
-                <button class="all-flights"><a href="Flights.html">All Flights</a></button>
+                <button class="all-flights"><a href="../controllers/flights.php">All Flights</a></button>
                 <?php else :?>
-                <button class="all-flights"><a href="Flights.html">All Flights</a></button>
+                  <a href="../controllers/flights.php"><button class="all-flights">All Flights</button></a>
                 <?php endif; ?>
               </div>
           </div>
@@ -129,6 +129,12 @@ require BASE_PATH . "partials/head.php";
   const departureButton =document.querySelector('#departureButton');
   const arrivalTable =document.querySelector('#arrivalTable');
   const arrivalButton =document.querySelector('#arrivalButton');
+  const hamburger = document.querySelector('.hamburger');
+
+  hamburger.onclick = function() {
+    let navBar = document.querySelector('.nav-bar-mobile');
+    navBar.classList.toggle("active");
+  }
 
   searchBar.addEventListener('click',hiddenSearch);
 
@@ -145,6 +151,7 @@ require BASE_PATH . "partials/head.php";
   function hiddenSearch () {
     searchIcon.classList.toggle('unhidden');
   }
+
 </script>
 </body>
 </html>

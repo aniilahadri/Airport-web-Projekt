@@ -38,6 +38,12 @@ require BASE_PATH . "partials/head.php";?>
   <script>
   const searchBar = document.querySelector('.searchBar');
   const searchIcon = document.querySelector('#search-div');
+  const hamburger = document.querySelector('.hamburger');
+
+  hamburger.onclick = function() {
+    let navBar = document.querySelector('.nav-bar-mobile');
+    navBar.classList.toggle("active");
+  }
 
   searchBar.addEventListener('click',hiddenSearch);
 

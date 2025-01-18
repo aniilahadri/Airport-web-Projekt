@@ -7,7 +7,7 @@
       <div class="header-mid-section">
         <a href="../controllers/flights.php">Flights</a>
         <a href="../controllers/parking.php">Parking</a>
-        <a href="../controllers/contact.php">Contact us</a>
+        <a href="../controllers/contact.php">Contact Us</a>
         <a href="#">About Us</a>
       </div>
       <div class="header-right-section">
@@ -17,5 +17,26 @@
             <button class="sign-in">Sign Up</button>
         </a>
       </div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="nav-bar-mobile">
+      <ul>
+        <li>
+          <a href="../controllers/flights.php" class="active">Flights</a>
+        </li>
+        <li>
+          <a href="../controllers/parking.php">Parking</a>
+        </li>
+        <li>
+          <a href="../controllers/contact.php">Contact Us</a>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+        </li>
+      </ul>
     </div>
 </header>

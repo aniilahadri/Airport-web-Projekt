@@ -15,24 +15,104 @@ html{font-size: 16px;}
 
 @media screen and (max-width:768px){
   html{font-size: 12px;}
+  .header-right-section .sign-in {
+    margin-right: -70px;
+  }
   .container-flights {
     max-width: 57.16em!important;
   }
   .table-container-flights td{
     padding:1.5em 1.6em!important;
   }
+  .hamburger {
+    display: block!important;
+    cursor: pointer;
+  }
+  .header-mid-section {
+    display: none!important;
+  }
+
+  .hamburger .line {
+    width: 30px;
+    height: 4px;
+    background: black;
+    margin: 6px 0;
+  }
+  .nav-bar-mobile.active {
+    height: 180px;
+  }
+  .nav-bar-mobile {
+    display: block!important;
+    height: 0;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right,#304352,#d7d2cc);
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .nav-bar-mobile.active ul {
+    opacity: 1;
+  }
+  .nav-bar-mobile > ul {
+    display: block;
+    width: fit-content;
+    margin:0 auto;
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    transition: 0.2s;
+    opacity: 0;
+  }
+  .nav-bar-mobile ul li a {
+    display: block;
+    color: inherit;
+    font-size: 1.5em;
+    padding: 10px 25px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    border-radius: 50px;
+  }
+  .nav-bar-mobile ul li a:hover{
+    background-color: #304352;
+    opacity: 0.8;
+    color: white;
+  }
+  .header-right-section .sign-in{
+    width: 80px!important;
+  }
+  .header-right-section {
+    justify-content: end!important;
+  }
   
 }
 @media screen and (max-width:600px) {
   html{font-size: 10px;}
-  .container-flights {
-    max-width: 100%!important;
-  }
+
   .table-container-flights td{
     padding:1.2em 1.2em!important;
   }
+  .header-right-section .sign-in {
+    margin-right: -35px;
+  }
+  .header-right-section .sign-in{
+    width: 70px!important;
+  }
+  .header-right-section img {
+    height: 3.4em!important;
+    width: 3.4em!important;
+  }
 }
 
+/*MENU*/
+.hamburger {
+  display: none;
+}
+.nav-bar-mobile {
+  display: none;
+}
 
 /*--GENERAL--*/
 
@@ -191,6 +271,9 @@ header{
  font-size: 1.5em;
  border-bottom: 1px solid #304352;
 }
+.departureTable{
+  display: none;
+}
 .top-container-flights button{
   border: none; 
   height: 50%; 
@@ -213,6 +296,7 @@ header{
  .table-container-flights td{
    font-size: 1.1rem;
    padding:1.875em 3.6em;
+   text-align: center;
  }
  .table-container-flights tr{
    font-size: 1.3rem;

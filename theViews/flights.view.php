@@ -44,7 +44,11 @@ require BASE_PATH . "partials/head.php";?>
                 <td colspan="2"><?=$arrival['Airline']?></td>
                 <td><?=$arrival['Flight_Id']?></td>
                 <td><?=$arrival['Status']?></td>
-                <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
+                <td>
+                  <a href="../controllers/flight.php?ID=<?=$arrival['ID']?>">
+                    <button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button>
+                  </a>
+                </td>
               </tr>
               <?php endforeach; ?>
             </table>
@@ -66,7 +70,11 @@ require BASE_PATH . "partials/head.php";?>
                 <td colspan="2"><?=$departure['Airline']?></td>
                 <td><?=$departure['Flight_Id']?></td>
                 <td><?=$departure['Status']?></td>
-                <td><button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button></td>
+                <td>
+                  <a href="../controllers/flight.php?ID=<?=$departure['ID']?>">
+                    <button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button>
+                  </a>
+                </td>
               </tr>
               <?php endforeach; ?>
             </table>

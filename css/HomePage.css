@@ -3,6 +3,9 @@ html{font-size: 16px;}
     /*tablet*/
 @media screen and (max-width:992px){
   html{font-size: 14px;}
+  .first-ad-content , .second-ad-content {
+    padding: 30px!important;
+  }
 }
 /*mobile*/
 
@@ -85,6 +88,26 @@ html{font-size: 16px;}
   }
   .header-right-section {
     justify-content: end!important;
+  }
+  .ads-container {
+    flex-direction: column;
+  }
+  .first-ad-content , .second-ad-content {
+    margin-left: 0!important;
+    flex-direction: column;
+    margin: 0 auto!important;
+  }
+  .first-ad-content img , .second-ad-content img {
+    width: 400px!important;
+    height: 250px!important;
+  }
+  .content-of-ad {    
+    width: 380px!important;
+    height: 100px!important;
+    margin-top: 0!important;
+    margin-left: 0!important;
+    border-radius: 0!important;
+    text-align: center!important;
   }
 }
 
@@ -354,6 +377,112 @@ header{
   color:#5f6061;
   font-size: 1.5em;
   text-transform: uppercase;
+}
+
+/*ADS*/
+
+.section-ads {
+  text-align: center;
+}
+.section-ads h1 {
+  font-size: 3em;
+  font-weight:700;
+}
+.section-ads p {
+  font-size: 1.3em;
+}
+.ads-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.first-ad-content , .second-ad-content {
+  display: flex;
+  margin:0 auto;
+  padding: 50px;
+}
+
+.first-ad-content img , .second-ad-content img {
+  width: 550px;
+  height: 350px;
+  box-shadow: 0 3px 8px 3px rgba(48, 67, 82,0.6)
+}
+.content-of-ad {    
+  width: 180px;
+  height: 250px;
+  background-color: white;
+  margin-top: 50px;
+  margin-left: -100px;
+  border-radius: 20px;
+  box-shadow: 1px 2px 8px 3px rgba(48, 67, 82,0.6);
+  text-align: start;
+  padding:5px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.content-of-ad h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.content-of-ad p {
+  font-size: 1em;
+  line-height: 1.6em;
+  opacity: 0.7;
+}
+
+.content-of-ad a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+.content-of-ad a:hover {
+  opacity: 0.5;
+}
+
+.links-for-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+} 
+
+.box-content {
+  text-decoration: none;
+  color: rgba(0,0,0,0.7);
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 1px 1px 8px 5px rgba(48, 67, 82,0.2);
+  height: 11em;
+  width: 11em;
+  padding: 1em;
+  margin-bottom: 75px;
+  opacity: 0.8;
+}
+.airport-about, .social-media, .airport-contact {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.box-content img {
+  height: fit-content;
+  width: fit-content;
+}
+
+.box-content:hover {
+  opacity: 1;
+  background-color: rgba(255, 117, 117, 0.05);
+  color: rgba(255, 17, 17, 0.8);
 }
 
 

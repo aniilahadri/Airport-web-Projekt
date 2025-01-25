@@ -22,7 +22,7 @@ html{font-size: 16px;}
     max-width: 57.16em!important;
   }
   .table-container-flights td{
-    padding:1.4em 1.4em!important;
+    padding:1.5em 1.4em!important;
   }
   .hamburger {
     display: block!important;
@@ -92,7 +92,7 @@ html{font-size: 16px;}
   html{font-size: 10px;}
 
   .table-container-flights td{
-    padding:1.1em 1.1em!important;
+    padding:1.2em 1.1em!important;
   }
   .header-right-section .sign-in {
     margin-right: -35px;
@@ -244,11 +244,12 @@ header{
   object-fit: cover;
 }
 .flight-arrivals-departures{
-  margin-top: -400px;
+  margin-top: -250px;
   z-index: 2; 
   position: relative;
   top: 50%;
 }
+
 .overlay{
   position: absolute;
   right: 0;
@@ -257,7 +258,6 @@ header{
   bottom:0;
   width: 100%;
   background-color: rgba(245, 245, 245,0.5);
-
 }
 .container-flights{
  background-color:white;
@@ -267,57 +267,100 @@ header{
  max-height: 100%;
  margin: 0 auto; 
  position: relative;
+ display: flex;
+ flex-direction: column;
+ gap: 2em;
+ padding: 30px 0;
+ margin-bottom: 75px;
 }
-.top-container-flights{
- height: 4.3em; 
- justify-content: center; 
- gap: 1.25em; 
- padding: 0 2em;
- font-size: 1.5em;
- border-bottom: 1px solid #304352;
+.nav-container {
+  width: 80%;
+  margin: 0 auto;
 }
-.departureTable{
-  display: none;
+.nav-container .line {
+  height: 5px;
+  width: 100%;
+  background-color: rgba(48, 67, 82,0.7);
 }
-.top-container-flights button{
-  border: none; 
-  height: 50%; 
-  width: 150px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+.container-flights h1 {
   text-align: center;
- 
-  background-color: transparent;
 }
-.top-container-flights button:hover,
-.top-container-flights button:active{
-  margin-bottom: -5px;
-  border-bottom: 5px solid #304352;
+.container-flights h2 {
+  opacity: 0.5;
+  margin:0;
 }
-.table-container-flights{
-  margin-top: 15px;
-  margin-bottom: 75px;
- }
- .table-container-flights td{
-   font-size: 1rem;
-   padding:1.875em 3.75em;
-   text-align: center;
-   max-width: 220px;
- }
- .table-container-flights tr{
-   font-size: 1.3rem;
-   padding: 0;
- }
- .table-container-flights th {
-  width: 200px;
- }
- .table-container-flights tr:hover :not(th){
-   background-color: rgba(205, 203, 203, 0.2);
- }
-.button-of-array{
+.container-flights h4 {
+  margin: 0.4em 0;
+}
+.body-container {
+  display: flex;
+  justify-content: space-between;
+}
+.body-container .left-details {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 200px;
+  max-height: 100%;
+  margin-left: 80px;
+  padding: 0 30px;
+  border-right: 1px solid rgba(48, 67, 82,0.5);
+  gap: 0.3em;
+  justify-content: center;
+}
+.left-details .status {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.left-details .airline {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.left-details p {
+  font-size: 0.8rem;
+  margin: 0;
+  opacity: 0.4;
+}
+.body-container .right-details {
+  width: 70%;
+  margin-right: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.right-details .start {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  gap:0.3em;
+}
+.right-details .end {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  gap: 0.3em;
+}
+
+.all-flights{
   border: none;
-  background-color: transparent;
+  padding: 8px;
+  border-radius: 2px;
+  color: white;
+  margin-left: 110px;
+  background-color:rgba(82, 177, 233,0.7);
+  font-weight:bold;
 }
+
+.all-flights:hover{
+  box-shadow: 0 0 6px rgba(64, 64, 64, 0.5);
+}
+.all-flights a{
+  text-decoration: none;
+  color: white;
+}
+
 
 
 /*--FOOTER--*/

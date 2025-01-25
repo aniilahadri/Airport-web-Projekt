@@ -43,42 +43,42 @@
           <span style="font-size: medium;">Discover the parking that best suits your needs</span>
           <h2>List</h2>
         </div>
-          <div class="parking-suboffer">
-            <h1>Parking-A</h1>
-            <div class="suboffer-second-block">
-              <img src="../images/walk.png" alt="iconOfPerson">
-              <h3>5 minute walk from Terminal 1</h3>
-            </div>
-            <button class="describe-button">Closer to T1</button>
-            <button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button>
+        <div class="parking-suboffer">
+          <h1>Parking-A</h1>
+          <div class="suboffer-second-block">
+            <img src="../images/walk.png" alt="iconOfPerson">
+            <h3>5 minute walk from Terminal 1</h3>
           </div>
-          <div class="parking-suboffer">
-            <h1>Parking-B</h1>
-            <div class="suboffer-second-block">
-              <img src="../images/walk.png" alt="iconOfPerson">
-              <h3>10 minute walk from Terminal 2</h3>
-            </div>
-            <button class="describe-button">Closer to T2</button>
-            <button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button>
+          <button class="describe-button">Closer to T1</button>
+          <button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button>
+        </div>
+        <div class="parking-suboffer">
+          <h1>Parking-B</h1>
+          <div class="suboffer-second-block">
+            <img src="../images/walk.png" alt="iconOfPerson">
+            <h3>10 minute walk from Terminal 2</h3>
           </div>
-          <div class="parking-suboffer"> 
-            <h1>Parking-C</h1>
-            <div  class="suboffer-second-block">
-              <img src="../images/walk.png" alt="iconOfPerson">
-              <h3>10 minute walk from Terminal 1</h3>
-            </div>
-            <button class="describe-button">Closer to T1</button>
-            <button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button>
+          <button class="describe-button">Closer to T2</button>
+          <button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button>
+        </div>
+        <div class="parking-suboffer"> 
+          <h1>Parking-C</h1>
+          <div  class="suboffer-second-block">
+            <img src="../images/walk.png" alt="iconOfPerson">
+            <h3>10 minute walk from Terminal 1</h3>
           </div>
-          <div class="parking-suboffer">
-            <h1>Parking-D</h1>
-            <div  class="suboffer-second-block">
-              <img src="../images/walk.png" alt="iconOfPerson">
-              <h3>5 minute walk from Terminal 2</h3>
-            </div>
-            <button class="describe-button">Closer to T2</button>
-            <button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button>
+          <button class="describe-button">Closer to T1</button>
+          <button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button>
+        </div>
+        <div class="parking-suboffer">
+          <h1>Parking-D</h1>
+          <div  class="suboffer-second-block">
+            <img src="../images/walk.png" alt="iconOfPerson">
+            <h3>5 minute walk from Terminal 2</h3>
           </div>
+          <button class="describe-button">Closer to T2</button>
+          <button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button>
+        </div>
       </section>
 
       <section class="subscribe-faq-container">
@@ -97,9 +97,7 @@
           <a href="#">I’ve lost my parking ticket. What should I do?</a>
         </div>
       </section>
-
     </main>
-
   <?php require BASE_PATH . 'partials/footer.php'?>
   <script>
   const searchBar = document.querySelector('.searchBar');

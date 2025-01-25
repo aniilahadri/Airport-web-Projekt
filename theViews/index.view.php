@@ -21,62 +21,63 @@ require BASE_PATH . "partials/head.php";
     </section>
     <section class="flight-arrivals-departures">
       <div class="overlay"></div>
-        <div class="container-flights">
-          <div class="top-container-flights" > 
-            <button id="arrivalButton">Arrivals</button>
-            <button id="departureButton">Departures</button>
+      <div class="container-flights">
+        <div class="top-container-flights" > 
+          <button id="arrivalButton">Arrivals</button>
+          <button id="departureButton">Departures</button>
+        </div>
+        <div class="body-container">
+          <div class="table-container-flights">
+            <table id="arrivalTable">
+              <tr>
+                <th>Time</th>
+                <th colspan="2">Destination</th>
+                <th colspan="2">Airline</th>
+                <th>Flight id</th>
+                <th>Status</th>
+              </tr>
+              <?php for($x=0;$x<5;$x++) :?>
+              <tr>
+                <td><?=$arrivals[$x]['Time']?></td>
+                <td colspan="2"><?=$arrivals[$x]['Destination']?></td>
+                <td colspan="2"><?=$arrivals[$x]['Airline']?></td>
+                <td><?=$arrivals[$x]['Flight_Id']?></td>
+                <td><?=$arrivals[$x]['Status']?></td>
+              </tr>
+              <?php endfor;?>
+            </table>
+            <table id="departureTable" class="departureTable">
+              <tr>
+                <th>Time</th>
+                <th colspan="2">Destination</th>
+                <th colspan="2">Airline</th>
+                <th>Flight id</th>
+                <th>Status</th>
+              </tr>
+              <?php for($x=0;$x<5;$x++) :?>
+              <tr>
+                <td><?=$departures[$x]['Time']?></td>
+                <td colspan="2"><?=$departures[$x]['Destination']?></td>
+                <td colspan="2"><?=$departures[$x]['Airline']?></td>
+                <td><?=$departures[$x]['Flight_Id']?></td>
+                <td><?=$departures[$x]['Status']?></td>
+              </tr>
+              <?php endfor;?>
+            </table>
           </div>
-          <div class="body-container">
-            <div class="table-container-flights">
-              <table id="arrivalTable">
-                <tr>
-                  <th>Time</th>
-                  <th colspan="2">Destination</th>
-                  <th colspan="2">Airline</th>
-                  <th>Flight id</th>
-                  <th>Status</th>
-                </tr>
-                <?php for($x=0;$x<5;$x++) :?>
-                <tr>
-                  <td><?=$arrivals[$x]['Time']?></td>
-                  <td colspan="2"><?=$arrivals[$x]['Destination']?></td>
-                  <td colspan="2"><?=$arrivals[$x]['Airline']?></td>
-                  <td><?=$arrivals[$x]['Flight_Id']?></td>
-                  <td><?=$arrivals[$x]['Status']?></td>
-                </tr>
-                <?php endfor;?>
-              </table>
-              <table id="departureTable" class="departureTable">
-                <tr>
-                  <th>Time</th>
-                  <th colspan="2">Destination</th>
-                  <th colspan="2">Airline</th>
-                  <th>Flight id</th>
-                  <th>Status</th>
-                </tr>
-                <?php for($x=0;$x<5;$x++) :?>
-                <tr>
-                  <td><?=$departures[$x]['Time']?></td>
-                  <td colspan="2"><?=$departures[$x]['Destination']?></td>
-                  <td colspan="2"><?=$departures[$x]['Airline']?></td>
-                  <td><?=$departures[$x]['Flight_Id']?></td>
-                  <td><?=$departures[$x]['Status']?></td>
-                </tr>
-                <?php endfor;?>
-              </table>
+          <div class="bottom-container-flights">
+            <div class="search-bottom-container">
+              <input type="text" name="submit-search" id="search" placeholder="Search Arrivals...">
+              <button type="submit" name="sumbit-search" class="search-button-submit"><img src="../images/211817_search_strong_icon.png" alt="search icon"></button>
             </div>
-              <div class="bottom-container-flights">
-                <div class="search-bottom-container">
-                  <input type="text" name="submit-search" id="search" placeholder="Search Arrivals...">
-                  <button type="submit" name="sumbit-search" class="search-button-submit"><img src="../images/211817_search_strong_icon.png" alt="search icon"></button>
-                </div>
-                <?php if ($_SESSIONS['user'] ?? false) : ?>
-                <button class="all-flights"><a href="../controllers/flights.php">All Flights</a></button>
-                <?php else :?>
-                  <a href="../controllers/flights.php"><button class="all-flights">All Flights</button></a>
-                <?php endif; ?>
-              </div>
+            <a href="../controllers/flights.php">
+              <button class="all-flights">
+                All Flights
+              </button>
+            </a>
           </div>
+        </div>  
+      </div>
     </section>
     <section>
       <div class="advertisement">

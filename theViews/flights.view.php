@@ -20,37 +20,37 @@ require BASE_PATH . "partials/head.php";?>
       </section>
       <section class="flight-arrivals-departures">
         <div class="overlay"></div>
-          <div class="container-flights">
+        <div class="container-flights">
           <div class="top-container-flights" > 
             <button id="arrivalButton">Arrivals</button>
             <button id="departureButton">Departures</button>
           </div>
           <div class="table-container-flights">
-          <table id="arrivalTable">
-              <tr>
-                <th>Date</th>
-                <th>Time</th>
-                <th colspan="2">Destination</th>
-                <th colspan="2">Airline</th>
-                <th>Flight id</th>
-                <th>Status</th>
-                <th>Details</th>
-              </tr>
-              <?php foreach($arrivals as $arrival) :?>
-              <tr>
-                <td><?=$arrival['Date']?></td>
-                <td><?=$arrival['Time']?></td>
-                <td colspan="2"><?=$arrival['Destination']?></td>
-                <td colspan="2"><?=$arrival['Airline']?></td>
-                <td><?=$arrival['Flight_Id']?></td>
-                <td><?=$arrival['Status']?></td>
-                <td>
-                  <a href="../controllers/flight.php?ID=<?=$arrival['ID']?>">
-                    <button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button>
-                  </a>
-                </td>
-              </tr>
-              <?php endforeach; ?>
+            <table id="arrivalTable">
+                <tr>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th colspan="2">Destination</th>
+                  <th colspan="2">Airline</th>
+                  <th>Flight id</th>
+                  <th>Status</th>
+                  <th>Details</th>
+                </tr>
+                <?php foreach($arrivals as $arrival) :?>
+                <tr>
+                  <td><?=$arrival['Date']?></td>
+                  <td><?=$arrival['Time']?></td>
+                  <td colspan="2"><?=$arrival['Destination']?></td>
+                  <td colspan="2"><?=$arrival['Airline']?></td>
+                  <td><?=$arrival['Flight_Id']?></td>
+                  <td><?=$arrival['Status']?></td>
+                  <td>
+                    <a href="../controllers/flight.php?ID_Arrival=<?=$arrival['ID_Arrival']?>">
+                      <button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button>
+                    </a>
+                  </td>
+                </tr>
+                <?php endforeach; ?>
             </table>
             <table id="departureTable" class="departureTable">
               <tr>
@@ -71,7 +71,7 @@ require BASE_PATH . "partials/head.php";?>
                 <td><?=$departure['Flight_Id']?></td>
                 <td><?=$departure['Status']?></td>
                 <td>
-                  <a href="../controllers/flight.php?ID=<?=$departure['ID']?>">
+                  <a href="../controllers/flight.php?ID_Departure=<?=$departure['ID_Departure']?>">
                     <button class="button-of-array"><img src="../images/right-arrow.png" alt="right-array"></button>
                   </a>
                 </td>
@@ -79,8 +79,9 @@ require BASE_PATH . "partials/head.php";?>
               <?php endforeach; ?>
             </table>
           </div>
-      </main>
-
+        </div>
+      </section>
+    </main>
   <?php require BASE_PATH . 'partials/footer.php'?>  
   <script>
   const searchBar = document.querySelector('.searchBar');

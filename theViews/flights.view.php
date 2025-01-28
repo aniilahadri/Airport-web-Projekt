@@ -1,5 +1,6 @@
 <?php
-require BASE_PATH . "partials/head.php";?>
+require BASE_PATH . "partials/head.php";
+?>
   <style>
     .unhidden{
       display: block;
@@ -36,7 +37,7 @@ require BASE_PATH . "partials/head.php";?>
                   <th>Status</th>
                   <th>Details</th>
                 </tr>
-                <?php foreach($arrivals as $arrival) :?>
+                <?php foreach($arrivals as $arrival) : ?>
                 <tr>
                   <td><?=$arrival['Date']?></td>
                   <td><?=$arrival['Time']?></td>

@@ -109,7 +109,7 @@ require BASE_PATH . "partials/head.php";
           <div class="content-of-ad">
             <h3>Delta Airline</h3>
             <p>Expereince Comfort and Quality! <br>Travel confidently with Delta Airlines</p>
-            <a href="https://www.kayak.com/Kosovo-Car-Rentals.276.crc.html" target="_blank">Learn more</a>
+            <a href="https://www.delta.com/" target="_blank">Learn more</a>
           </div>
         </div>
       </div>

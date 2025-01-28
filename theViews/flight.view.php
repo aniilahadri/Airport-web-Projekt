@@ -57,6 +57,9 @@ require BASE_PATH . "partials/head.php";?>
             </div>
           </div>
           <?php else :?>
+            <h1>Flight number 
+              <span style="color: rgb(48, 67, 82);"><?=$departure['Flight_Id']?></span>
+            </h1>
           <div class="body-container">
           <div class="left-details">
               <h2>Flight</h2>

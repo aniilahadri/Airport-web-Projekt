@@ -67,7 +67,7 @@ require BASE_PATH . "partials/head.php";
           </div>
           <div class="bottom-container-flights">
             <div class="search-bottom-container">
-              <input type="text" name="submit-search" id="search" placeholder="Search Arrivals...">
+              <input type="text" name="submit-search" id="search" placeholder="Search Flights...">
               <button type="submit" name="sumbit-search" class="search-button-submit"><img src="../images/211817_search_strong_icon.png" alt="search icon"></button>
             </div>
             <a href="../controllers/flights.php">
@@ -138,7 +138,7 @@ require BASE_PATH . "partials/head.php";
           <div class="content-of-ad">
             <h3>Delta Airline</h3>
             <p>Expereince Comfort and Quality! <br>Travel confidently with Delta Airlines</p>
-            <a href="https://www.kayak.com/Kosovo-Car-Rentals.276.crc.html" target="_blank">Learn more</a>
+            <a href="https://www.delta.com/" target="_blank">Learn more</a>
           </div>
         </div>
       </div>

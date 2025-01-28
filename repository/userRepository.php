@@ -26,11 +26,13 @@ class userRepository{
         $sql = "INSERT INTO user ( name, email, password) VALUES (:name,:email,:password)";
 
         $conn->query($sql,[
-            ':name'=>$name,':email'=>$email,':password'=>$password
+            ':name'=>$name,
+            ':email'=>$email,
+            ':password'=>$password
         ]);
 
        
-        echo "<script> alert('User has been inserted successfully!'); </script>";
+        echo "<script> alert('User has been inserted successfully!'); </script>";//fix
     }
 
     function getAllUsers() {
@@ -93,7 +95,7 @@ class userRepository{
     function login($user) {
 
         $_SESSION['user'] = [
-            'email' => $user['email']
+            'email' => $email
         ];
     
         session_regenerate_id(true);

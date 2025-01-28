@@ -28,8 +28,13 @@ require BASE_PATH . "partials/head.php";?>
           <label for="email-input">
             <img src="../images/134146_mail_email_icon.png" height="24px" alt="email">
           </label>
-          <input type="email" name="email" id="email-input" placeholder="Email">
+          <input type="text" name="email" id="email-input" placeholder="Email">
         </div>
+        <?php if(isset($errors['email'])):?>
+            <p style="color:red;margin:0;opacity:0.7"> 
+              <?= $errors['email']?>
+            </p>
+        <?php endif; ?>
         <div>
           <label for="password-input">
             <img src="../images/3669338_lock_ic_icon.png" height="24px" alt="lock">
@@ -42,6 +47,21 @@ require BASE_PATH . "partials/head.php";?>
           </label>
           <input type="password" name="repeat-password" id="repeat-password-input" placeholder="Repeat Password">
         </div>
+        <?php if(isset($errors['password'])):?>
+            <p style="color:red;margin:0;opacity:0.7"> 
+              <?= $errors['password']?>
+            </p>
+        <?php endif; ?>
+        <?php if(isset($errors['general'])):?>
+            <p style="color:red;margin:0;opacity:0.7"> 
+              <?= $errors['general']?>
+            </p>
+        <?php endif; ?>
+        <?php if(isset($errors['exists'])):?>
+            <p style="color:red;margin:0;opacity:0.7"> 
+              <?= $errors['exists']?>
+            </p>
+        <?php endif; ?>
         <button type="submit" name="submit">Signup</button>
       </form>
       <div class="link">

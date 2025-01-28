@@ -1,5 +1,6 @@
 <?php
 // $heading = 'Home-Airport';
+session_start();
 const BASE_PATH = __DIR__ . '/../';
 
 require BASE_PATH . "Database.php";

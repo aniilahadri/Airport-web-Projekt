@@ -13,9 +13,14 @@
       <div class="header-right-section">
         <img src="../images/211817_search_strong_icon.png" alt="search icon" class="searchBar" style="cursor: pointer;">
         <input type="text" class="search-bar-header" id="search-div" placeholder="Search...">
-        <a href="../controllers/signin.php">
-            <button class="sign-in">Sign Up</button>
-        </a>
+        <?php if(isset($_SESSION['user'])) : ?>
+          <img src="../images/user_icon.png" alt="user">
+          <!-- make it a button so i can log out -->
+        <?php else :?>
+          <a href="../controllers/signin.php">
+              <button class="sign-in">Sign Up</button>
+          </a>
+        <?php endif;?>
       </div>
       <div class="hamburger">
         <div class="line"></div>

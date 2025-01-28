@@ -1,7 +1,7 @@
-<?php/*
+<?php
 
 const BASE_PATH = __DIR__ . '/../';
-
+/*
 //include BASE_PATH . "Database.php";
 include BASE_PATH . "Validator.php";
 include BASE_PATH . 'repository/userRepository.php';
@@ -37,7 +37,7 @@ $db = new Database();
 $ur = new userRepository();
 
 
-$user = $db->query("select * from users where email = :email", [
+$user = $db->query("select * from user where email = :email", [
     "email" => $email,
 ])->fetch();
 
@@ -57,6 +57,7 @@ if($user) {
     header("location: ../controllers/index.php");
     exit();
 }
+    */
 
-require BASE_PATH . "theViews/login.view.php"; */
+require BASE_PATH . "theViews/login.view.php"; 
 ?>

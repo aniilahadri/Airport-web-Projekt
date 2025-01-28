@@ -17,12 +17,12 @@ require BASE_PATH . "partials/head.php";?>
     <div class="wrapper">
       <h1>Sign up</h1>
       <p id="error-message"></p>
-      <form id="form">
+      <form id="form"  action="../controllers/signin.php" method="post">
         <div>
           <label for="firstname-input">
             <img src="../images/1564534_customer_man_user_account_profile_icon.png" alt="user" height="24px">
           </label>
-          <input type="text" name="firstname" id="firstname-input" placeholder="Firstname">
+          <input type="text" name="name" id="firstname-input" placeholder="Firstname">
         </div>
         <div>
           <label for="email-input">
@@ -42,7 +42,7 @@ require BASE_PATH . "partials/head.php";?>
           </label>
           <input type="password" name="repeat-password" id="repeat-password-input" placeholder="Repeat Password">
         </div>
-        <button type="submit">Signup</button>
+        <button type="submit" name="submit">Signup</button>
       </form>
       <div class="link">
         <p>Already have an account? <a href="../controllers/login.php">Login</a></p>

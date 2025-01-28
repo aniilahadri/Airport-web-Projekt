@@ -17,18 +17,24 @@ require BASE_PATH . "partials/head.php";?>
     <div class="wrapper">
       <h1>Login</h1>
       <p id="error-message"></p>
-      <form id="form">
+      <form id="form" action="../controllers/login.php" method="post">
         <div>
           <label for="email-input">
             <img src="../images/134146_mail_email_icon.png" height="24px" alt="email">
           </label>
           <input type="email" name="email" id="email-input" placeholder="Email">
+          <?php if(isset($errors['email'])):?>
+                        <p class="text-red-500 text-xs mt-3 font-semibold"> <?= $errors['email']?> </p>
+                    <?php endif; ?>
         </div>
         <div>
           <label for="password-input">
             <img src="../images/3669338_lock_ic_icon.png" height="24px" alt="lock">
           </label>
           <input type="password" name="password" id="password-input" placeholder="Password">
+          <?php if(isset($errors['password'])):?>
+                        <p class="text-red-500 text-xs mt-3 font-semibold"> <?= $errors['password']?> </p>
+                    <?php endif; ?>
         </div>
           <button type="submit">Login</button>
       </form>

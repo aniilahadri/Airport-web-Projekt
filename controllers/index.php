@@ -2,7 +2,7 @@
 // $heading = 'Home-Airport';
 const BASE_PATH = __DIR__ . '/../';
 
-require BASE_PATH . "Datebase.php";
+require BASE_PATH . "Database.php";
 
 $db = new Database();
 

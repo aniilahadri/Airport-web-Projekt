@@ -3,7 +3,7 @@
 const BASE_PATH = __DIR__ . '/../';
 
 $link = '../css/Flights.css';
-require BASE_PATH . "Datebase.php";
+require BASE_PATH . "Database.php";
 
 $db = new Database();
 

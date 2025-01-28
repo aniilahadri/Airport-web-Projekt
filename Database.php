@@ -11,8 +11,7 @@ class Database {
         'dbname' => 'flights',
     ];
 
-    $dsn = "mysql:host={$config['host']};port={$config['port']};dbname={$config['dbname']};
-    charset=utf8mb4";
+    $dsn = "mysql:host={$config['host']};port={$config['port']};dbname={$config['dbname']};charset=utf8mb4";
 
 
         $this->connection = new PDO($dsn, $username, $password, [

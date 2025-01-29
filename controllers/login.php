@@ -1,63 +1,80 @@
 <?php
 
+session_start();
+
+
 const BASE_PATH = __DIR__ . '/../';
-/*
+
 //include BASE_PATH . "Database.php";
 include BASE_PATH . "Validator.php";
 include BASE_PATH . 'repository/userRepository.php';
 
 $link = '../css/signin.css';
 
-$email = $_POST["email"];
-$password = $_POST["password"];
-
 $errors = [];
 
-//validate
-if(! Validator::email($email)) {
-    $errors["email"] = "Please enter a valid email address";
-}
+if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-if(! Validator::string($password,7,255)) {
-    $errors["password"] = "Please enter a password of at least seven characters";
-}
+  if (empty($_POST['email']) || empty($_POST['password'])){
 
-
-
-if(! empty($errors)) {
-    $attributes = [
-        'errors'=>$errors
+    $errors = [
+      "general" => 'Please fill out all the fields!'
     ];
-    require BASE_PATH . 'theViews/login.view.php';
-}
 
+  } else {
+                   
+    $email = $_POST['email'];       
+    $password = $_POST['password']; 
+          
+  //validate
+    if(! Validator::email($email)) {
+        $errors["email"] = "Please enter a valid email address";
+    }
 
-//check if the account exists
-$db = new Database();
-$ur = new userRepository();
+    if(! Validator::string($password,8,255)) {
+        $errors["password"] = "Please enter a valid password";
+    }
 
+    if(! empty($errors)) {
+      require BASE_PATH . "theViews/login.view.php";
+      exit();
+    }
 
-$user = $db->query("select * from user where email = :email", [
-    "email" => $email,
-])->fetch();
+    $db = new Database();
 
-//dd($user);
-
-if($user) {
-    header("location: ../controllers/index.php");
-    exit();
-} else {
-    $db->query("insert into users (password,email) values (:password ,:email)", [
+    $loginUser = $db->query("select * from user where email = :email", [
         "email" => $email,
-        "password" => password_hash($password, PASSWORD_BCRYPT)
-    ]);
+    ])->fetch();
 
-  $ur ->login($user);
+    if(!$loginUser) {
+      $errors = [
+        'NoUser' => 'No matching account found for that email address!'
+      ];
+      require BASE_PATH . "theViews/login.view.php";
+      exit();
+    } 
 
-    header("location: ../controllers/index.php");
-    exit();
+    // if(password_verify($password,$loginUser['Password'])) {
+
+    if($loginUser['Password'] === $password) {
+
+      $userRepository = new UserRepository();
+
+      $userRepository->login($loginUser);
+
+      header("location: ../controllers/index.php");
+      exit();
+    } else {
+      
+      $errors = [
+        'password-matching' => 'No matching account found for that email address and password!'
+      ];
+      require BASE_PATH . "theViews/login.view.php";
+      exit();
+    }
+  }
 }
-    */
 
 require BASE_PATH . "theViews/login.view.php"; 
+
 ?>

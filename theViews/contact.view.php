@@ -1,6 +1,6 @@
 <?php
 require BASE_PATH . "partials/head.php";?>
-  <script defer src="contact-validation.js"></script>
+  <script defer src="../contact-validation.js"></script>
   <style>
     .unhidden{
       display: block;

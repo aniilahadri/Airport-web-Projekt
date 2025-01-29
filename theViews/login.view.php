@@ -1,6 +1,6 @@
 <?php
 require BASE_PATH . "partials/head.php";?>
-  <script type="text/javascript" src="validation.js" defer></script>
+  <script type="text/javascript" src="../validation.js" defer></script>
   <style>
     .unhidden{
       display: block;
@@ -22,20 +22,36 @@ require BASE_PATH . "partials/head.php";?>
           <label for="email-input">
             <img src="../images/134146_mail_email_icon.png" height="24px" alt="email">
           </label>
-          <input type="email" name="email" id="email-input" placeholder="Email">
-          <?php if(isset($errors['email'])):?>
-                        <p class="text-red-500 text-xs mt-3 font-semibold"> <?= $errors['email']?> </p>
-                    <?php endif; ?>
+          <input type="text" name="email" id="email-input" placeholder="Email" 
+          value="<?=(isset($_POST['email']) ? htmlspecialchars($_POST['email']) : false)?>">
         </div>
         <div>
           <label for="password-input">
             <img src="../images/3669338_lock_ic_icon.png" height="24px" alt="lock">
           </label>
           <input type="password" name="password" id="password-input" placeholder="Password">
-          <?php if(isset($errors['password'])):?>
-                        <p class="text-red-500 text-xs mt-3 font-semibold"> <?= $errors['password']?> </p>
-                    <?php endif; ?>
         </div>
+        <?php if(isset($errors['general'])):?>
+          <p style="color:red;margin:0;opacity:0.8"> 
+            <?= $errors['general']?>
+          </p>
+        <?php elseif(isset($errors['password'])):?>
+          <p style="color:red;margin:0;opacity:0.8"> 
+            <?= $errors['password']?>
+          </p>
+        <?php elseif(isset($errors['email'])):?>
+          <p style="color:red;margin:0;opacity:0.8"> 
+            <?= $errors['email']?>
+          </p>
+        <?php elseif(isset($errors['NoUser'])):?>
+          <p style="color:red;margin:0;opacity:0.8"> 
+            <?= $errors['NoUser']?>
+          </p>
+        <?php elseif(isset($errors['password-matching'])):?>
+          <p style="color:red;margin:0;opacity:0.8"> 
+            <?= $errors['password-matching']?>
+          </p>
+        <?php endif; ?>
           <button type="submit">Login</button>
       </form>
       <div class="link">

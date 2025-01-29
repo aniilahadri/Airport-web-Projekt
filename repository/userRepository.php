@@ -28,7 +28,8 @@ class userRepository{
         $conn->query($sql,[
             ':name'=>$name,
             ':email'=>$email,
-            ':password'=>$password
+            // ':password'=>password_hash($password, PASSWORD_BCRYPT)
+            ':password' => $password
         ]);
 
        
@@ -67,11 +68,13 @@ class userRepository{
         $sql = "UPDATE user SET name=:name,  email=:email, password=:password WHERE id=:id";
  
         $statement = $conn->query($sql,[
-            ':id'=>$id,':name'=>$name,':email'=>$email,':password'=>$password
+            ':id'=>$id,
+            ':name'=>$name,
+            ':email'=>$email,
+            // ':password'=>password_hash($password, PASSWORD_BCRYPT)
+            ':password' => $password
         ]);
 
-
-      
         echo "<script>alert('Update was successful');</script>";
     }
 
@@ -95,7 +98,7 @@ class userRepository{
     function login($user) {
 
         $_SESSION['user'] = [
-            'email' => $email
+            'email' => $user['email']
         ];
     
         session_regenerate_id(true);

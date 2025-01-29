@@ -15,7 +15,7 @@
         <input type="text" class="search-bar-header" id="search-div" placeholder="Search...">
         <?php if(isset($_SESSION['user'])) : ?>
           <img src="../images/user_icon.png" alt="user">
-          <!-- make it a button so i can log out -->
+          <button class="log-out">Log out</button>
         <?php else :?>
           <a href="../controllers/signin.php">
               <button class="sign-in">Sign Up</button>

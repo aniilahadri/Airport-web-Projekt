@@ -1,6 +1,6 @@
 <?php
 require BASE_PATH . "partials/head.php";?>
-<link rel="icon" href="images/9055475_bxs_plane_alt_icon.png">
+<script type="text/javascript" src="../validation.js" defer></script>
   <style>
     .unhidden{
       display: block;
@@ -22,19 +22,15 @@ require BASE_PATH . "partials/head.php";?>
           <label for="firstname-input">
             <img src="../images/1564534_customer_man_user_account_profile_icon.png" alt="user" height="24px">
           </label>
-          <input type="text" name="name" id="firstname-input" placeholder="Firstname">
+          <input type="text" name="name" id="firstname-input" placeholder="Firstname" 
+          value="<?=(isset($_POST['name']) ? htmlspecialchars($_POST['name']) : false)?>">
         </div>
         <div>
           <label for="email-input">
             <img src="../images/134146_mail_email_icon.png" height="24px" alt="email">
           </label>
-          <input type="text" name="email" id="email-input" placeholder="Email">
+          <input type="text" name="email" id="email-input" placeholder="Email" value="<?=(isset($_POST['email']) ? htmlspecialchars($_POST['email']) : false)?>">
         </div>
-        <?php if(isset($errors['email'])):?>
-            <p style="color:red;margin:0;opacity:0.7"> 
-              <?= $errors['email']?>
-            </p>
-        <?php endif; ?>
         <div>
           <label for="password-input">
             <img src="../images/3669338_lock_ic_icon.png" height="24px" alt="lock">
@@ -47,18 +43,20 @@ require BASE_PATH . "partials/head.php";?>
           </label>
           <input type="password" name="repeat-password" id="repeat-password-input" placeholder="Repeat Password">
         </div>
-        <?php if(isset($errors['password'])):?>
-            <p style="color:red;margin:0;opacity:0.7"> 
-              <?= $errors['password']?>
-            </p>
-        <?php endif; ?>
         <?php if(isset($errors['general'])):?>
-            <p style="color:red;margin:0;opacity:0.7"> 
+            <p style="color:red;margin:0;opacity:0.8"> 
               <?= $errors['general']?>
             </p>
-        <?php endif; ?>
-        <?php if(isset($errors['exists'])):?>
-            <p style="color:red;margin:0;opacity:0.7"> 
+        <?php elseif(isset($errors['password'])):?>
+          <p style="color:red;margin:0;opacity:0.8"> 
+            <?= $errors['password']?>
+          </p>
+        <?php elseif(isset($errors['email'])):?>
+            <p style="color:red;margin:0;opacity:0.8"> 
+              <?= $errors['email']?>
+            </p>
+        <?php elseif(isset($errors['exists'])):?>
+            <p style="color:red;margin:0;opacity:0.8"> 
               <?= $errors['exists']?>
             </p>
         <?php endif; ?>

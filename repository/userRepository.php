@@ -98,7 +98,8 @@ class userRepository{
     function login($user) {
 
         $_SESSION['user'] = [
-            'email' => $user['email']
+            'email' => $user['Email'],
+            'name' =>$user['Name']
         ];
     
         session_regenerate_id(true);

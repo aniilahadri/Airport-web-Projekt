@@ -9,6 +9,11 @@
         <a href="../controllers/parking.php">Parking</a>
         <a href="../controllers/contact.php">Contact Us</a>
         <a href="../controllers/aboutus.php">About Us</a>
+        <?php if(isset($_SESSION['user'])) :?>
+        <?php if(($_SESSION['user']['name']==='Admin') && ($_SESSION['user']['email']==='admin@gmail.com')) :?>
+        <a href="../controllers/dashboard.php">Dashboard</a>
+        <?php endif;?>
+        <?php endif;?>
       </div>
       <div class="header-right-section">
         <img src="../images/211817_search_strong_icon.png" alt="search icon" class="searchBar" style="cursor: pointer;">

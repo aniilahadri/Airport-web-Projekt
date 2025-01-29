@@ -26,11 +26,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         
     //validate
     if(! Validator::email($email)) {
-      $errors["email"] = "Please enter a valid email address";
+      $errors = [
+        "email"=>"Please enter a valid email address"
+      ];
     }
 
     if(! Validator::string($password,8,255)) {
-      $errors["password"] = "Please enter a password of at least eight characters";
+      $errors = [
+        "password"=>"Please enter a valid password"
+      ]; 
     }
 
     if(! empty($errors)) {
@@ -58,7 +62,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
       $userRepository->insertUser($user);
 
-      $userRepository->login($user);
+      $_SESSION['user'] = [
+        'email' => $email
+      ];
+
+      session_regenerate_id(true);
       
       header("location: ../controllers/index.php");
       exit();

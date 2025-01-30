@@ -15,7 +15,7 @@
           <h3 align="center">There is currently limited availability for new car park bookings.</h3>
         </div>
         <div class="booking-part">
-          <form action="" method="post">
+          <form action="" method="post" action="../controllers/parking..php">
             <div class="input-part">
               <label for="entry-date">Entry Date</label><br>
               <input type="date" id="entry-date" name="entry-date">
@@ -32,7 +32,13 @@
               <label for="leaving-time">Leaving Time</label><br>
               <input type="time" id="leaving-time" name="leaving-time">
             </div>
+            <?php if(isset($_SESSION['user'])) :?>
             <button type="submit">Reserve</button>
+            <?php else:?>
+            <a href="../controllers/signin.php">
+              Sign up to secure your parking space.
+            </a>
+            <?php endif;?>
           </form>
         </div>
       </section>

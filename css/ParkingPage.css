@@ -107,6 +107,9 @@ html{font-size: 16px;}
   .booking-part button {
     padding: 10px 15px!important;
   }
+  .booking-part a {
+    padding: 10px 15px!important;
+  }
   .header-right-section .sign-in {
     margin-right: -10px;
     width: 70px!important;
@@ -275,6 +278,16 @@ header{
   color: white;
   font-size:larger;
   font-weight: bold;
+  margin-top: 13px;
+}
+.booking-part a {
+  color: white;
+  background-color: rgb(124, 222, 189);
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 13px 15px;
+  font-weight: bold;
+  font-size: 1em;
   margin-top: 13px;
 }
 

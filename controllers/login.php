@@ -5,7 +5,7 @@ session_start();
 
 const BASE_PATH = __DIR__ . '/../';
 
-//include BASE_PATH . "Database.php";
+
 include BASE_PATH . "Validator.php";
 include BASE_PATH . 'repository/userRepository.php';
 
@@ -59,9 +59,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       exit();
     } 
 
-    // if(password_verify($password,$loginUser['Password'])) {
+    if(password_verify($password,$loginUser['Password'])) {
 
-    if($loginUser['Password'] === $password) {
+    //if($loginUser['Password'] === $password) {
 
       $userRepository = new UserRepository();
 

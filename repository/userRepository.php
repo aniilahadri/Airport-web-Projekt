@@ -28,8 +28,8 @@ class userRepository{
         $conn->query($sql,[
             ':name'=>$name,
             ':email'=>$email,
-            // ':password'=>password_hash($password, PASSWORD_BCRYPT)
-            ':password' => $password
+            ':password'=>password_hash($password, PASSWORD_BCRYPT)
+            
         ]);
 
        
@@ -71,8 +71,8 @@ class userRepository{
             ':id'=>$id,
             ':name'=>$name,
             ':email'=>$email,
-            // ':password'=>password_hash($password, PASSWORD_BCRYPT)
-            ':password' => $password
+            ':password'=>password_hash($password, PASSWORD_BCRYPT)
+            
         ]);
 
         echo "<script>alert('Update was successful');</script>";
@@ -99,7 +99,7 @@ class userRepository{
 
         $_SESSION['user'] = [
             'email' => $user['Email'],
-            'name' =>$user['Name']
+            'role' =>$user['Role']
         ];
     
         session_regenerate_id(true);

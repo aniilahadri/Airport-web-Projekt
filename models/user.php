@@ -2,7 +2,8 @@
 
 class User {
 
-    private $id;        
+    private $id;
+    private $role;        
     private $name;         
     private $email;       
     private $password;  
@@ -15,6 +16,9 @@ class User {
 
     function getId() {
         return $this->id;
+    }
+    function getRole(){
+        return $this->role;
     }
 
     function getName() {

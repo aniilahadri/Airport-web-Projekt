@@ -10,7 +10,7 @@
         <a href="../controllers/contact.php">Contact Us</a>
         <a href="../controllers/aboutus.php">About Us</a>
         <?php if(isset($_SESSION['user'])) :?>
-        <?php if(($_SESSION['user']['name']==='Admin') && ($_SESSION['user']['email']==='admin@gmail.com')) :?>
+        <?php if($_SESSION['user']['role']==='Admin') :?>
         <a href="../controllers/dashboard.php">Dashboard</a>
         <?php endif;?>
         <?php endif;?>
@@ -51,7 +51,7 @@
           <a href="../controllers/aboutus.php">About Us</a>
         </li>
         <?php if(isset($_SESSION['user'])) :?>
-        <?php if(($_SESSION['user']['name']==='Admin') && ($_SESSION['user']['email']==='admin@gmail.com')) :?>
+        <?php if($_SESSION['user']['role']==='Admin'):?>
         <li>
           <a href="../controllers/dashboard.php">Dashboard</a>
         </li>

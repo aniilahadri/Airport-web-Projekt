@@ -50,6 +50,13 @@
         <li>
           <a href="../controllers/aboutus.php">About Us</a>
         </li>
+        <?php if(isset($_SESSION['user'])) :?>
+        <?php if(($_SESSION['user']['name']==='Admin') && ($_SESSION['user']['email']==='admin@gmail.com')) :?>
+        <li>
+          <a href="../controllers/dashboard.php">Dashboard</a>
+        </li>
+        <?php endif;?>
+        <?php endif;?>
       </ul>
     </div>
 </header>

@@ -17,6 +17,7 @@ html{font-size: 16px;}
   html{font-size: 12px;}
   .header-right-section .sign-in {
     margin-right: -70px;
+    width: 80px!important;
   }
   .log-out{
     width: 80px!important;
@@ -43,7 +44,7 @@ html{font-size: 16px;}
     margin: 6px 0;
   }
   .nav-bar-mobile.active {
-    height: 180px;
+    height: auto;
   }
   .nav-bar-mobile {
     display: block!important;
@@ -84,28 +85,23 @@ html{font-size: 16px;}
     opacity: 0.8;
     color: white;
   }
-  .header-right-section .sign-in{
-    width: 80px!important;
-  }
   .header-right-section {
     justify-content: end!important;
   }
   
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:620px) {
   html{font-size: 10px;}
 
   .table-container-flights td{
     padding:1.2em 1.1em!important;
   }
   .header-right-section .sign-in {
-    margin-right: -35px;
-  }
-  .header-right-section .sign-in{
+    margin-right: -10px;
     width: 70px!important;
   }
   .log-out {
-    margin-right: -35px;
+    margin-right: -10px;
     width: 70px!important;
   }
   .header-right-section img {
@@ -257,16 +253,16 @@ header{
   padding-top: 5px;
 }
 .header-right-section .sign-in{
-    padding: 0.5em 0.8em;
-    border-radius: 100px;
-    border: none;
-    box-shadow: 2px 1px 8px rgb(64, 63, 63);
-    font-size: 1.1em;
-    width: 100px;
-    margin-left: 1em;
-    cursor: pointer;
-    background-color: rgba(255,255,255,0.2);
-    transition: 0.15s;
+  padding: 8px 13px;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 2px 1px 8px rgb(64, 63, 63);
+  font-size: 1.1em;
+  width: 100px;
+  margin-left: 1em;
+  cursor: pointer;
+  background-color: rgba(255,255,255,0.2);
+  transition: 0.15s;
 }
 .log-out{
   padding: 8px 13px;

@@ -35,7 +35,7 @@ html{font-size: 16px;}
     margin: 6px 0;
   }
   .nav-bar-mobile.active {
-    height: 180px;
+    height: auto;
   }
   .nav-bar-mobile {
     display: block!important;
@@ -131,11 +131,11 @@ html{font-size: 16px;}
 @media screen and (max-width:620px) {
   html{font-size: 10px;} 
   .header-right-section .sign-in {
-    margin-right: -35px;
+    margin-right: -10px;
     width: 70px!important;
   }
   .log-out {
-    margin-right: -35px;
+    margin-right: -10px;
     width: 70px!important;
   }
   .header-right-section img {

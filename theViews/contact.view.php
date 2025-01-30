@@ -14,19 +14,24 @@ require BASE_PATH . "partials/head.php";?>
 <div style="display: flex;flex-direction: column; min-height:100vh; ">
   <?php require BASE_PATH . "partials/header.php"?>
     <main style="flex:1">
-      <div class="contact-container">
-        <form id="contact">
-          <p id="error-message"></p>
-          <div class="email-div">
-            <label for="email">Email</label><br>
-            <input type="email" name="email" id="email" placeholder="johndoe@email.com">
+      <div class="align-container">
+        <div class="contact-container">
+          <div class="image-container">
+            <img src="../images/website-contact.png" alt="contact-us">
           </div>
-          <div class="message-div">
-            <label for="message">Your message</label><br>
-            <input type="textarea" id="message" name="message" placeholder="I need...">
-          </div>
-          <button type="submit">Send message</button>
-        </form>
+          <form id="contact" method="post" action="../controllers/contact.php">
+            <p id="error-message"></p>
+            <div class="email-div">
+              <label for="email">Email</label><br>
+              <input type="email" name="email" id="email" placeholder="johndoe@email.com">
+            </div>
+            <div class="message-div">
+              <label for="message">Your message</label><br>
+              <input type="textarea" id="message" name="message" placeholder="Complaints or Suggestions">
+            </div>
+            <button type="submit">Send message</button>
+          </form>
+        </div>
       </div>
     </main>
 

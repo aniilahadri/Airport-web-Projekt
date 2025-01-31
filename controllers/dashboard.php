@@ -3,8 +3,8 @@
 session_start();
 
 const BASE_PATH = __DIR__ . "/../";
-require BASE_PATH . "Database.php";
-require BASE_PATH . "reporsitory/userRepository.php";
+// require BASE_PATH . "Database.php";
+require BASE_PATH . "repository/userRepository.php";
 $link = "../css/Dashboard.css";
 
 $db = new Database();

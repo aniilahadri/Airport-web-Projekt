@@ -75,7 +75,7 @@
       <section class="parking-offer-container">
         <div class="text-parking">
           <h1>Our Parkings</h1>
-          <span style="font-size: medium;">Discover the parking that best suits your needs</span>
+          
           <h2>List</h2>
         </div>
         <div class="parking-suboffer">

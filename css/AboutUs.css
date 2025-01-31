@@ -285,6 +285,7 @@ header{
   font-weight: 500;
   font-size: 2.5em;
   margin-top: 5px;
+  text-align: center;
 }
 .first-content , .second-content{
   display: flex;

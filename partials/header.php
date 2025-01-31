@@ -9,7 +9,7 @@
         <a href="../controllers/parking.php">Parking</a>
         <a href="../controllers/contact.php">Contact Us</a>
         <a href="../controllers/aboutus.php">About Us</a>
-        <?php if(isset($_SESSION['user'])) :?>
+        <?php if(isset($_SESSION['user']['role'])) :?>
         <?php if($_SESSION['user']['role']==='Admin') :?>
         <a href="../controllers/dashboard.php">Dashboard</a>
         <?php endif;?>
@@ -50,7 +50,7 @@
         <li>
           <a href="../controllers/aboutus.php">About Us</a>
         </li>
-        <?php if(isset($_SESSION['user'])) :?>
+        <?php if(isset($_SESSION['user']['role'])) :?>
         <?php if($_SESSION['user']['role']==='Admin'):?>
         <li>
           <a href="../controllers/dashboard.php">Dashboard</a>

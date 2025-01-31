@@ -232,21 +232,37 @@ header{
 
 /*--main--*/
 
-.container{
+.square-container{
     display: flex;
-    padding-top: 10px;
-    justify-content: space-between;
+    margin-top: 20px;
+    justify-content: space-around;
 
 }
-.container *{
+.square-container *{
     margin: 0;
 }
 .square{
-    border: 1px solid rgba(64, 64, 64, 0.5);
-    padding: 30px;
-    height: 125px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    border: 1px solid rgba(82, 177, 233,0.7);
+    padding: 45px;
+    height: 150px;
     width: 200px;
-    text-align: center;
+    align-items: center;
+}
+.details-button{
+  border-radius: 5px;
+  color: white;
+  background-color:rgba(82, 177, 233,0.7);
+  border: none;
+  margin: 5px;
+  width: 50%;
+  padding: 8px;
+  font-weight: bold;
+}
+.details-button:hover{
+  box-shadow: 1px 2px 8px rgba(64, 64, 64, 0.5);
 }
 .square p{
     font-size: 1.5em;

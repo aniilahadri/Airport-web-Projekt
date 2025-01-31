@@ -23,13 +23,13 @@ require BASE_PATH . "partials/head.php";?>
             <img src="../images/1564534_customer_man_user_account_profile_icon.png" alt="user" height="24px">
           </label>
           <input type="text" name="name" id="firstname-input" placeholder="Firstname" 
-          value="<?=(isset($_POST['name']) ? htmlspecialchars($_POST['name']) : false)?>">
+          value="<?=((isset($_POST['name']) && $errors !== []) ? htmlspecialchars($_POST['name']) : false)?>">
         </div>
         <div>
           <label for="email-input">
             <img src="../images/134146_mail_email_icon.png" height="24px" alt="email">
           </label>
-          <input type="text" name="email" id="email-input" placeholder="Email" value="<?=(isset($_POST['email']) ? htmlspecialchars($_POST['email']) : false)?>">
+          <input type="text" name="email" id="email-input" placeholder="Email" value="<?=((isset($_POST['email']) && $errors !== [])  ? htmlspecialchars($_POST['email']) : false)?>">
         </div>
         <div>
           <label for="password-input">

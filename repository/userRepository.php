@@ -67,7 +67,7 @@ class userRepository{
 
         $sql = "UPDATE user SET name=:name,  email=:email, password=:password WHERE id=:id";
  
-        $statement = $conn->query($sql,[
+        $conn->query($sql,[
             ':id'=>$id,
             ':name'=>$name,
             ':email'=>$email,
@@ -85,7 +85,7 @@ class userRepository{
       
         $sql = "DELETE FROM user WHERE id=:id";
 
-        $statement = $conn->query($sql,[
+        $conn->query($sql,[
             ':id'=>$id
         ]); 
 
@@ -98,6 +98,7 @@ class userRepository{
     function login($user) {
 
         $_SESSION['user'] = [
+            'id' => $user['ID'],
             'email' => $user['Email'],
             'role' =>$user['Role']
         ];

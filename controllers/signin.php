@@ -11,6 +11,11 @@ include_once BASE_PATH . "Validator.php";
 
 $errors = [];
 
+if(isset($_SESSION['user'])) {
+  header ('location: ../controllers/index.php');
+  exit();
+}
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   if (empty($_POST['name'])  || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['repeat-password'])){
@@ -63,6 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       $userRepository->insertUser($user);
 
       $_SESSION['user'] = [
+        'id' => $user->getId(),
         'email' => $email
       ];
 

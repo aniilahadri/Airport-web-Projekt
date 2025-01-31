@@ -15,31 +15,60 @@
           <h3 align="center">There is currently limited availability for new car park bookings.</h3>
         </div>
         <div class="booking-part">
-          <form action="" method="post" action="../controllers/parking..php">
+          <form action="" method="post" action="../controllers/parking.php">
             <div class="input-part">
               <label for="entry-date">Entry Date</label><br>
-              <input type="date" id="entry-date" name="entry-date">
+              <input type="date" id="entry-date" name="entry-date" 
+              value="<?=((isset($_POST['entry-date']) && $errors !== []) ? htmlspecialchars($_POST['entry-date']) : false)?>">
             </div>
             <div class="input-part">
               <label for="entry-time">Entry Time</label><br>
-              <input type="time" id="entry-time" name="entry-time">
+              <input type="time" id="entry-time" name="entry-time" 
+              value="<?=((isset($_POST['entry-time']) && $errors !== [])  ? htmlspecialchars($_POST['entry-time']) : false)?>">
             </div>
             <div class="input-part">
               <label for="leaving-date">Leaving Date</label><br>
-              <input type="date" id="leaving-date" name="leaving-date">
+              <input type="date" id="leaving-date" name="leaving-date" 
+              value="<?=((isset($_POST['leaving-date']) && $errors !== []) ? htmlspecialchars($_POST['leaving-date']) : false)?>">
             </div>
             <div class="input-part">
               <label for="leaving-time">Leaving Time</label><br>
-              <input type="time" id="leaving-time" name="leaving-time">
+              <input type="time" id="leaving-time" name="leaving-time" 
+              value="<?=((isset($_POST['leaving-time'])  && $errors !== []) ? htmlspecialchars($_POST['leaving-time']) : false)?>">
             </div>
             <?php if(isset($_SESSION['user'])) :?>
             <button type="submit">Reserve</button>
             <?php else:?>
-            <a href="../controllers/signin.php">
-              Sign up to secure your parking space.
+            <a href="../controllers/login.php">
+              Log in to secure your parking space.
             </a>
             <?php endif;?>
           </form>
+          <?php if(isset($errors['general'])):?>
+              <p style="color:red;margin:0;text-align:center"> 
+                <?= $errors['general']?>
+              </p>
+            <?php elseif(isset($errors['date'])):?>
+              <p style="color:red;margin:0;text-align:center"> 
+                <?= $errors['date']?>
+              </p>
+            <?php elseif(isset($errors['time'])):?>
+              <p style="color:red;margin:0;text-align:center"> 
+                <?= $errors['time']?>
+              </p>  
+            <?php elseif(isset($errors['currentDate'])):?>
+              <p style="color:red;margin:0;text-align:center"> 
+                <?= $errors['currentDate']?>
+              </p>
+            <?php elseif(isset($errors['currentTime'])):?>
+              <p style="color:red;margin:0;text-align:center"> 
+                <?= $errors['currentTime']?>
+              </p>   
+            <?php elseif($message !== ''):?>
+              <p style="color:green;margin:0;text-align:center"> 
+                <?= $message?>
+              </p>
+            <?php endif?>
         </div>
       </section>
 

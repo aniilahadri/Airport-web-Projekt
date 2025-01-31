@@ -20,14 +20,13 @@ require BASE_PATH . "partials/head.php";?>
             <img src="../images/website-contact.png" alt="contact-us">
           </div>
           <form id="contact" method="post" action="../controllers/contact.php">
-            
             <div class="email-div">
               <label for="email">Email</label><br>
-              <input type="email" name="email" id="email" placeholder="johndoe@email.com">
+              <input type="email" name="email" id="email" placeholder="johndoe@email.com" value="<?=((isset($_POST['email']) && $errors !== []) ? htmlspecialchars($_POST['email']) : false)?>">
             </div>
             <div class="message-div">
               <label for="message">Your message</label><br>
-              <input type="textarea" id="message" name="message" placeholder="Complaints or Suggestions">
+              <input type="textarea" id="message" name="message" placeholder="Complaints or Suggestions" value="<?=((isset($_POST['message']) && $errors !== []) ? htmlspecialchars($_POST['message']) : false)?>">
             </div>
             <p id="error-message"></p>
             <?php if(isset($errors['general'])):?>
@@ -43,7 +42,6 @@ require BASE_PATH . "partials/head.php";?>
                 <?= $errors['message']?>
               </p>
             <?php endif?>
-            
             <button type="submit">Send message</button>
           </form>
         </div>

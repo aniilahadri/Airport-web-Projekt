@@ -23,7 +23,7 @@ require BASE_PATH . "partials/head.php";?>
             <img src="../images/134146_mail_email_icon.png" height="24px" alt="email">
           </label>
           <input type="text" name="email" id="email-input" placeholder="Email" 
-          value="<?=(isset($_POST['email']) ? htmlspecialchars($_POST['email']) : false)?>">
+          value="<?=((isset($_POST['email']) && $errors !== []) ? htmlspecialchars($_POST['email']) : false)?>">
         </div>
         <div>
           <label for="password-input">

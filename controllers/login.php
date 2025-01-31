@@ -13,6 +13,11 @@ $link = '../css/signin.css';
 
 $errors = [];
 
+if(isset($_SESSION['user'])) {
+  header ('location: ../controllers/index.php');
+  exit();
+}
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   if (empty($_POST['email']) || empty($_POST['password'])){
@@ -59,6 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       exit();
     } 
 
+
     if(password_verify($password,$loginUser['Password'])) {
 
     //if($loginUser['Password'] === $password) {
@@ -70,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       header("location: ../controllers/index.php");
       exit();
     } else {
-      
+
       $errors = [
         'password-matching' => 'No matching account found for that email address and password!'
       ];

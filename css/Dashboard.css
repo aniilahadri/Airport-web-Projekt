@@ -282,6 +282,7 @@ table {
   width: 90%;
   border-collapse: collapse;
   background-color: white;
+  text-align: center;
 }
 table td,th {
   padding: 20px;

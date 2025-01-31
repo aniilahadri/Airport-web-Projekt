@@ -98,11 +98,11 @@ class userRepository{
     }
 
 
-    function updateFlightDepartures($flight_id,$time,$origin,$destination,$airline,$status,$date,$landing_time){
+    function updateFlightDepartures($id_departures,$flight_id,$time,$origin,$destination,$airline,$status,$date,$landing_time){
         $conn = $this->connection;
 
-        $sql = "INSERT INTO departures (time,origin,destination,airline,flight_id,status,date,landing_time) VALUES (:time,:origin,:destination,:airline,:flight_id,:status,:date,:landing_time)";
-        
+        $sql = "UPDATE departures SET time=:time,origin=:origin,destination=:destination,airline=:airline,flight_id=:flight_id,status=:status,date=:date,landing_time=:landing_time where id_departures=$id_departures";
+
         $conn->query($sql,[
             ':time'=>$time,
             ':origin'=>$origin,
@@ -118,11 +118,11 @@ class userRepository{
     }
 
 
-    function updateFlightArrivals($flight_id, $time, $origin,$destination,$airline,$status,$date,$takeoff_time) {
+    function updateFlightArrivals($id_arrivals,$flight_id, $time, $origin,$destination,$airline,$status,$date,$takeoff_time) {
         $conn = $this->connection;
 
 
-        $sql = "INSERT INTO arrivals (time,origin,destination,airline,flight_id,status,date,takeoff_time) VALUES (:time,:origin,:destination,:airline,:flight_id,:status,:date,:landing_time)";
+        $sql = "UPDATE arrivals SET time=:time,origin=:origin,destination=:destination,airline=:airline,flight_id=:flight_id,status=:status,date=:date,takeoff_time=:takeoff_time where id_arrivals=$id_arrivals";
 
         $conn->query($sql,[
             ':time'=>$time,

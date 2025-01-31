@@ -252,7 +252,7 @@ header{
     width: 200px;
     align-items: center;
 }
-.details-button {
+.square button {
   border-radius: 5px;
   color: white;
   background-color:rgba(82, 177, 233,0.7);
@@ -262,32 +262,53 @@ header{
   padding: 8px;
   font-weight: bold;
 }
-.details-button:hover {
+.square button:hover {
   box-shadow: 1px 2px 8px rgba(64, 64, 64, 0.5);
 }
 .square p {
     font-size: 1.5em;
 }
 
+.users,.arrival,.departure,.suggestion {
+  display: none;
+}
+.insert-user,.insert-arrival,.insert-departure,.insert-suggestion {
+  display: none;
+}
 .table-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(64, 64, 64, 0.1);
+  margin: 75px;
+  padding: 20px;
 }
 
 table {
-  border: 2px solid rgba(82, 177, 233,0.7);
-  margin:40px 0;
+  /* border: 2px solid rgba(82, 177, 233,0.7); */
+  margin: 40px auto;
   width: 90%;
   border-collapse: collapse;
   background-color: white;
   text-align: center;
 }
+
 table td,th {
   padding: 20px;
   border: 2px solid rgba(82, 177, 233,0.7);
   border-collapse: collapse;
+}
+.table-container a  button{
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  background-color:rgba(82, 177, 233,0.7);
+  border: none;
+  font-weight: bold;
+  width: 90%;
+}
+.table-container a{
+  width: 50%;
+  margin-top: -20px; 
 }
 
 

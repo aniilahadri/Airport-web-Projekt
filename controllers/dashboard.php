@@ -22,7 +22,7 @@ if($_SESSION['user']['role']==='Admin')  {
   $users=$ur->getAllUsers();
   $arrivals = $db ->query('Select * from arrivals')->fetchAll();
   $departures = $db->query('Select * from departures')->fetchAll();
-  $suggestions = 
+  $suggestions = $db->query('Select * from contactus')->fetchAll();
 
   require BASE_PATH . "theViews/dashboard.view.php";
   exit();

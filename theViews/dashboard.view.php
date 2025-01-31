@@ -22,7 +22,7 @@ require BASE_PATH . "partials/head.php";?>
               <?php if(isset($UserCount)) :?>
                   <p><?= $UserCount["Users"]?></p>
               <?php endif ?>
-              <button class="details-button">Details</button>
+              <button class="details-button-user">Details</button>
           </div>
           <div class="square">
               <h1>Arrivals</h1>
@@ -30,7 +30,7 @@ require BASE_PATH . "partials/head.php";?>
               <?php if(isset($ArrivalsCount)) :?>
                   <p><?= $ArrivalsCount["Arrivals"]?></p>
               <?php endif ?>
-              <button class="details-button">Details</button>
+              <button class="details-button-arrival">Details</button>
           </div>
           <div class="square">
               <h1>Departures</h1>
@@ -38,7 +38,7 @@ require BASE_PATH . "partials/head.php";?>
               <?php if(isset($DeparturesCount)) :?>
                   <p><?= $DeparturesCount["Departures"]?></p>
               <?php endif ?>
-              <button class="details-button">Details</button>
+              <button class="details-button-departure">Details</button>
           </div>
           <div class="square">
               <h1>Suggestions</h1>
@@ -47,7 +47,7 @@ require BASE_PATH . "partials/head.php";?>
               <?php if(isset($SuggestionsCount)) :?>
                   <p><?= $SuggestionsCount["Suggestions"]?></p>
               <?php endif ?>
-              <button class="details-button">Details</button>
+              <button class="details-button-sug">Details</button>
           </div>
       </div><br>
       <div class="table-container">
@@ -58,6 +58,8 @@ require BASE_PATH . "partials/head.php";?>
             <th>Name</th>
             <th>Email</th>
             <th colspan="2">Password</th>
+            <th>Update</th>
+            <th>Delete</th>
           </tr>
           <?php foreach($users as $user) :?>
           <tr>
@@ -65,11 +67,14 @@ require BASE_PATH . "partials/head.php";?>
             <td><?=$user['Role']?></td>
             <td><?=$user['Name']?></td>
             <td><?=$user['Email']?></td>
-            <td><?=$user['Password']?></td>
+            <td colspan="2"><?=$user['Password']?></td>
+            <td><a href="#">Click</a></td>
+            <td><a href="#">Click</a></td>
           </tr>
           <?php endforeach; ?>
         </table>
-        <table id="arrival" class="arrival">
+        <a href="#" class="insert-user"><button>Insert into User</button></a>
+        <table id="arrivals" class="arrival">
           <tr>
             <th>ID_Arrival</th>
             <th>Time</th>
@@ -79,6 +84,8 @@ require BASE_PATH . "partials/head.php";?>
             <th>Status</th>
             <th>Date</th>
             <th colspan="2">Takeoff_Time</th>
+            <th>Update</th>
+            <th>Delete</th>
           </tr>
           <?php foreach($arrivals as $arrival) :?>
           <tr>
@@ -90,10 +97,13 @@ require BASE_PATH . "partials/head.php";?>
             <td><?=$arrival['Status']?></td>
             <td><?=$arrival['Date']?></td>
             <td colspan="2"><?=$arrival['Takeoff_Time']?></td>
+            <td><a href="#">Click</a></td>
+            <td><a href="#">Click</a></td>
           </tr>
           <?php endforeach; ?>
         </table>
-        <table id="departure" class="departure">
+        <a href="#" class="insert-arrival"><button>Insert into Arrivals</button></a>
+        <table id="departures" class="departure">
           <tr>
             <th>ID_Departure</th>
             <th>Time</th>
@@ -103,6 +113,8 @@ require BASE_PATH . "partials/head.php";?>
             <th>Status</th>
             <th>Date</th>
             <th colspan="2">Landing_Time</th>
+            <th>Update</th>
+            <th>Delete</th>
           </tr>
           <?php foreach($departures as $departure) :?>
           <tr>
@@ -114,9 +126,31 @@ require BASE_PATH . "partials/head.php";?>
             <td><?=$departure['Status']?></td>
             <td><?=$departure['Date']?></td>
             <td colspan="2"><?=$departure['Landing_Time']?></td>
+            <td><a href="#">Click</a></td>
+            <td><a href="#">Click</a></td>
           </tr>
           <?php endforeach; ?>
         </table>
+        <a href="#" class="insert-departure"><button>Insert into Depratures</button></a>
+        <table id="suggestions" class="suggestion">
+          <tr>
+            <th>ContactID</th>
+            <th >Email</th>
+            <th colspan="2">Message</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+          <?php foreach($suggestions as $suggestion) :?>
+          <tr>
+            <td><?=$suggestion['ContactID']?></td>
+            <td><?=$suggestion['Email']?></td>
+            <td colspan="2"><?=$suggestion['Message']?></td>
+            <td><a href="#">Click</a></td>
+            <td><a href="#">Click</a></td>
+          </tr>
+          <?php endforeach; ?>
+        </table>
+        <a href="#" class="insert-suggestion"><button>Suggestions</button></a>
       </div>
     </main>
 
@@ -125,6 +159,18 @@ require BASE_PATH . "partials/head.php";?>
   const searchBar = document.querySelector('.searchBar');
   const searchIcon = document.querySelector('#search-div');
   const hamburger = document.querySelector('.hamburger');
+  const detailsButtonUser = document.querySelector('.details-button-user');
+  const detailsButtonArrival = document.querySelector('.details-button-arrival');
+  const detailsButtonDeparture = document.querySelector('.details-button-departure');
+  const detailsButtonSug = document.querySelector('.details-button-sug');
+  const users = document.querySelector('#users');
+  const arrivals = document.querySelector('#arrivals');
+  const departures = document.querySelector('#departures');
+  const suggestions = document.querySelector('#suggestions');
+  const insertArrival = document.querySelector('.insert-arrival');
+  const insertUser = document.querySelector('.insert-user');
+  const insertDeparture = document.querySelector('.insert-departure');
+  const insertSug = document.querySelector('.insert-suggestion');
 
   hamburger.onclick = function() {
     let navBar = document.querySelector('.nav-bar-mobile');
@@ -133,8 +179,18 @@ require BASE_PATH . "partials/head.php";?>
 
   searchBar.addEventListener('click',hiddenSearch);
 
+  detailsButtonUser.addEventListener('click',function(){hiddenTable(users,insertUser)});
+  detailsButtonArrival.addEventListener('click',function(){hiddenTable(arrivals,insertArrival)});
+  detailsButtonDeparture.addEventListener('click',function(){hiddenTable(departures,insertDeparture)});
+  detailsButtonSug.addEventListener('click',function(){hiddenTable(suggestions,insertSug)});
+
   function hiddenSearch () {
     searchIcon.classList.toggle('unhidden');
+  }
+  function hiddenTable (table,button = null) {
+    table.classList.toggle('unhidden');
+    if(button)
+    button.classList.toggle('unhidden');
   }
 </script>  
 </body>

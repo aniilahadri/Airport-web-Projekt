@@ -129,6 +129,8 @@ require BASE_PATH . "partials/head.php";
         <img src="../images/img6.jpg" alt="Slide 6">
         <img src="../images/img7.jpg" alt="Slide 7">
         <img src="../images/img8.jpg" alt="Slide 8">
+        <img src="../images/img9.jpg" alt="Slide 9">
+
         
     </div>
     <button class="next" onclick="moveSlide(1)">&#10095;</button>
@@ -214,7 +216,7 @@ require BASE_PATH . "partials/head.php";
 
 function moveSlide(direction) {
     const slides = document.querySelectorAll('.slider img');
-    const totalSlides = slides.length;
+    const totalSlides = slides.length-2;
 
     currentSlide += direction;
     
@@ -224,7 +226,7 @@ function moveSlide(direction) {
         currentSlide = 0;
     }
 
-    document.querySelector('.slider').style.transform = `translateX(-${currentSlide * 600}px)`;
+    document.querySelector('.slider').style.transform = `translateX(-${currentSlide * 400}px)`;
 }
 
 

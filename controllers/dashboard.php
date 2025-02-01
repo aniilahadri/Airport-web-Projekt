@@ -18,11 +18,13 @@ if($_SESSION['user']['role']==='Admin')  {
   $ArrivalsCount = $db->query("Select count(*) as Arrivals From arrivals")->fetch();
   $DeparturesCount= $db->query("Select count(*) as Departures From departures")->fetch();
   $SuggestionsCount = $db->query("Select count(*) as Suggestions From contactus")->fetch();
+  $ParkingsCount = $db->query("Select count(*) as Parkings From parking")->fetch();
 
   $users=$ur->getAllUsers();
   $arrivals = $db ->query('Select * from arrivals')->fetchAll();
   $departures = $db->query('Select * from departures')->fetchAll();
   $suggestions = $db->query('Select * from contactus')->fetchAll();
+  $parkings = $db->query('Select * from parking')->fetchAll();
 
   require BASE_PATH . "theViews/dashboard.view.php";
   exit();

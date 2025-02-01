@@ -25,8 +25,8 @@
           </form>
           
         <?php else :?>
-          <a href="../controllers/signin.php">
-              <button class="sign-in">Sign Up</button>
+          <a href="../controllers/login.php">
+              <button class="sign-in">Log in</button>
           </a>
         <?php endif;?>
       </div>

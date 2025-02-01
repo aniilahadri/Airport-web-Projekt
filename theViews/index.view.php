@@ -119,6 +119,20 @@ require BASE_PATH . "partials/head.php";
         </div>
       </div>
     </section>
+  
+    <div class="slider-container">
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <div class="slider">
+        <img src="../images/img1.jpg" alt="Slide 1">
+        <img src="../images/img2.jpg" alt="Slide 2">
+        <img src="../images/img4.jpg" alt="Slide 4">
+        <img src="../images/img6.jpg" alt="Slide 6">
+        <img src="../images/img7.jpg" alt="Slide 7">
+        <img src="../images/img8.jpg" alt="Slide 8">
+        
+    </div>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+     </div>
     <section class="section-ads">
       <h1>Travel with a 
         <span style="color: rgb(29, 126, 230);">sense of calm</span>
@@ -196,6 +210,23 @@ require BASE_PATH . "partials/head.php";
   function hiddenSearch () {
     searchIcon.classList.toggle('unhidden');
   }
+  let currentSlide = 0;
+
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.slider img');
+    const totalSlides = slides.length;
+
+    currentSlide += direction;
+    
+    if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    } else if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    }
+
+    document.querySelector('.slider').style.transform = `translateX(-${currentSlide * 600}px)`;
+}
+
 
 </script>
 </body>

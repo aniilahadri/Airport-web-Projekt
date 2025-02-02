@@ -32,8 +32,9 @@ if(isset($_GET['user'])){
             ];
            
             } else {
-
-            $user = new User($name, $email, $password);
+            
+            $user = new User($id,$name, $email, $password);
+            
 
             $ur->insertUser($user);
 
@@ -118,6 +119,7 @@ if(isset($_GET['user'])){
     <title>Document</title>
 </head>
 <body>
+    <div style="display: flex; justify-content:center;width:50%; margin:0 auto; flex-direction:column; align-items:center">
     <?php if(isset($_GET['user'])) : ?>
     <h3>Insert User</h3>
     <form action="" method="post">
@@ -198,5 +200,6 @@ if(isset($_GET['user'])){
         <input type="submit"  value="Save Changes"> <br> <br>
     </form>
     <?php endif?>
+    </div>
 </body>
 </html>

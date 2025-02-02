@@ -66,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       $userRepository = new UserRepository();
 
       $userRepository->insertUser($user);
-
+      
       $_SESSION['user'] = [
         'id' => $user->getId(),
         'email' => $email

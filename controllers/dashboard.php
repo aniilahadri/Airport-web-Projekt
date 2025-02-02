@@ -34,7 +34,4 @@ if($_SESSION['user']['role']==='Admin')  {
     exit();
   }
 
-
-
-
 ?>

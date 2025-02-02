@@ -54,7 +54,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $db = new Database();
-
+    
     $parking =$db->query("INSERT INTO parking (User_Id,User_Email,Entry_Date,Entry_Time,Leaving_Date,Leaving_Time) VALUES(:user,:email,:entryDate,:entryTime,:leavingDate,:leavingTime)",[
       ':user' => $_SESSION['user']['id'],
       ':email' => $_SESSION['user']['email'],

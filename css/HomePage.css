@@ -407,7 +407,7 @@ header{
   z-index: 10;
 }
 
-button:hover {
+.slider-container button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 

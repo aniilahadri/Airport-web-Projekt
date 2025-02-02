@@ -114,7 +114,7 @@ require BASE_PATH . "partials/head.php";
         </div>
       </div>
       <div class="links-for-user">
-        <a href="../controllers/aboutus.php" class="box-content" target="_blank">
+        <a href="../controllers/aboutus.php" class="box-content" >
           <div class="airport-about">
             <img src="../images/5355685_airplane_christmas_holiday_plane_snow_icon.png" alt="aboutUs-icon">
             <h3>Who We Are</h3>

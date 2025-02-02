@@ -64,10 +64,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       exit();
     } 
 
-
+    print_r($loginUser);
     if(password_verify($password,$loginUser['Password'])) {
 
-    //if($loginUser['Password'] === $password) {
+    
 
       $userRepository = new UserRepository();
 

@@ -1,6 +1,5 @@
 <?php
 
-//const BASE_PATH = __DIR__ . '/../';
 include __DIR__ . '/../' . 'Database.php';
 
 
@@ -31,9 +30,6 @@ class userRepository{
             ':password'=>password_hash($password, PASSWORD_BCRYPT)
             
         ]);
-
-       
-        echo "<script> alert('User has been inserted successfully!'); </script>";//fix
     }
 
     function getAllUsers() {
@@ -61,21 +57,20 @@ class userRepository{
     }
 
     
-    function updateUser($id, $name,  $email,  $password) {
+    function updateUser($id, $role, $name,  $email,  $password) {
         $conn = $this->connection;
 
 
-        $sql = "UPDATE user SET name=:name,  email=:email, password=:password WHERE id=:id";
+        $sql = "UPDATE user SET role=:role,name=:name,  email=:email, password=:password WHERE id=:id";
  
         $conn->query($sql,[
             ':id'=>$id,
+            ':role'=>$role,
             ':name'=>$name,
             ':email'=>$email,
             ':password'=>password_hash($password, PASSWORD_BCRYPT)
             
-        ]);
-
-        echo "<script>alert('Update was successful');</script>";
+        ]);  
     }
 
     
@@ -89,7 +84,7 @@ class userRepository{
             ':id'=>$id
         ]); 
 
-        echo "<script>alert('Delete was successful');</script>";
+      
     }
 
 

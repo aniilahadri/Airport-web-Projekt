@@ -1,10 +1,9 @@
 <?php
 
-//const BASE_PATH = __DIR__ . '/../';
 include __DIR__ . '/../' . 'Database.php';
 
 
-class userRepository{
+class flightsRepository{
     private $connection; 
 
    
@@ -28,7 +27,7 @@ class userRepository{
             $date =  $flight->getDate();
             $takeoff_time=$flight->getTakeoffTime();
 
-            $sql = "INSERT INTO arrivals (time,origin,destination,airline,flight_id,status,date,takeoff_time) VALUES (:time,:origin,:destination,:airline,:flight_id,:status,:date,:landing_time)";
+            $sql = "INSERT INTO arrivals (Time,Origin,Destination,Airline,Flight_Id,Status,Date,Takeoff_Time) VALUES (:time,:origin,:destination,:airline,:flight_id,:status,:date,:takeoff_time)";
 
             $conn->query($sql,[
                 ':time'=>$time,
@@ -41,8 +40,6 @@ class userRepository{
                 ':takeoff_time'=>$takeoff_time
             ]);
 
-            echo "<script> alert('User has been inserted successfully!'); </script>";//fix
-
         }else{
 
             $flight_id = $flight->getFlight_id();            
@@ -54,7 +51,7 @@ class userRepository{
             $date =  $flight->getDate();
             $landing_time =$flight-> getLandingTime();
 
-            $sql = "INSERT INTO departures (time,origin,destination,airline,flight_id,status,date,landing_time) VALUES (:time,:origin,:destination,:airline,:flight_id,:status,:date,:landing_time)";
+            $sql = "INSERT INTO departures (Time,Origin,Destination,Airline,Flight_Id,Status,Date,Landing_Time) VALUES (:time,:origin,:destination,:airline,:flight_id,:status,:date,:landing_time)";
             
             $conn->query($sql,[
                 ':time'=>$time,
@@ -66,14 +63,10 @@ class userRepository{
                 ':date'=>$date,
                 ':landing_time'=>$landing_time
             ]);
-
-            echo "<script> alert('User has been inserted successfully!'); </script>";//fix
         }
-
-   
     }
 
-    function getAllFlights($flight_Type) { //returns flights by the type we send
+    function getAllFlights($flight_Type) { 
         $conn = $this->connection;
 
         $sql = "SELECT * FROM $flight_Type";
@@ -85,23 +78,21 @@ class userRepository{
     }
 
     
-    function getFlightById($flight_Type,$flight_id) {
+    function getFlightById($flight_Table,$flight_id,$flight_type) {
         $conn = $this->connection;
 
-     
-        $sql = "SELECT * FROM $flight_Type WHERE flight_id='$flight_id'";
+        $sql = "SELECT * FROM $flight_Table WHERE $flight_type='$flight_id'";
 
-        
         $flight = $conn->query($sql)->fetch(); 
 
         return $flight;
     }
 
 
-    function updateFlightDepartures($id_departures,$flight_id,$time,$origin,$destination,$airline,$status,$date,$landing_time){
+    function updateFlightDepartures($id_departure,$flight_id,$time,$origin,$destination,$airline,$status,$date,$landing_time){
         $conn = $this->connection;
 
-        $sql = "UPDATE departures SET time=:time,origin=:origin,destination=:destination,airline=:airline,flight_id=:flight_id,status=:status,date=:date,landing_time=:landing_time where id_departures=$id_departures";
+        $sql = "UPDATE departures SET time=:time,origin=:origin,destination=:destination,airline=:airline,flight_id=:flight_id,status=:status,date=:date,landing_time=:landing_time where ID_Departure=$id_departure";
 
         $conn->query($sql,[
             ':time'=>$time,
@@ -113,16 +104,14 @@ class userRepository{
             ':date'=>$date,
             ':landing_time'=>$landing_time
             ]);
-
-        echo "<script>alert('Update was successful');</script>";
     }
 
 
-    function updateFlightArrivals($id_arrivals,$flight_id, $time, $origin,$destination,$airline,$status,$date,$takeoff_time) {
+    function updateFlightArrivals($id_arrival,$flight_id, $time, $origin,$destination,$airline,$status,$date,$takeoff_time) {
         $conn = $this->connection;
 
 
-        $sql = "UPDATE arrivals SET time=:time,origin=:origin,destination=:destination,airline=:airline,flight_id=:flight_id,status=:status,date=:date,takeoff_time=:takeoff_time where id_arrivals=$id_arrivals";
+        $sql = "UPDATE arrivals SET time=:time,origin=:origin,destination=:destination,airline=:airline,flight_id=:flight_id,status=:status,date=:date,takeoff_time=:takeoff_time where ID_Arrival=$id_arrival";
 
         $conn->query($sql,[
             ':time'=>$time,
@@ -135,24 +124,18 @@ class userRepository{
             ':takeoff_time'=>$takeoff_time
             ]);
 
-
-        echo "<script>alert('Update was successful');</script>";
     }
 
     
-    function deleteUser($flight_Type,$flight_id) {
+    function deleteFlight($flight_table,$flight_type,$flight_id) {
         $conn = $this->connection;
 
-      
-        $sql = "DELETE FROM $flight_Type WHERE flight_id=:flight_id";
+        $sql = "DELETE FROM $flight_table WHERE $flight_type=:flight_id";
 
         $conn->query($sql,[
             ':flight_id'=>$flight_id
         ]); 
-
-        echo "<script>alert('Delete was successful');</script>";
     }
-
 }
 
 

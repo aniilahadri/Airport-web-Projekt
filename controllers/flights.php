@@ -4,11 +4,11 @@ session_start();
 const BASE_PATH = __DIR__ . '/../';
 
 $link = '../css/Flights.css';
-require BASE_PATH . "Database.php";
+require BASE_PATH . "repository/flightsRepository.php";
 
-$db = new Database();
+$flightsRepository = new flightsRepository();
 
-$arrivals = $db ->query('Select * from arrivals')->fetchAll();
-$departures = $db->query('Select * from departures')->fetchAll();
+$arrivals = $flightsRepository->getAllFlights("arrivals");
+$departures = $flightsRepository->getAllFlights("departures");
 
 require BASE_PATH . "theViews/flights.view.php";

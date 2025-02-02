@@ -29,7 +29,7 @@ require BASE_PATH . "partials/head.php";?>
           </div>
           <div class="button-square">
             <button class="details-button-user">Details</button>
-            <a href=""><button>Add</button></a>
+            <a href="../controllers/insert.php?<?="user"?>"><button>Add</button></a>
           </div>
         </div>
         <div class="square">
@@ -45,7 +45,7 @@ require BASE_PATH . "partials/head.php";?>
           </div>
             <div class="button-square">
               <button class="details-button-arrival">Details</button>
-              <a href=""><button>Add</button></a>
+              <a href="../controllers/insert.php?<?="arrivals"?>"><button>Add</button></a>
             </div>
         </div>
         <div class="square">
@@ -61,7 +61,7 @@ require BASE_PATH . "partials/head.php";?>
           </div>
           <div class="button-square">
             <button class="details-button-departure">Details</button>
-            <a href=""><button>Add</button></a>
+            <a href="../controllers/insert.php?<?="departures"?>"><button>Add</button></a>
           </div>
         </div>
         <div class="square">
@@ -114,10 +114,10 @@ require BASE_PATH . "partials/head.php";?>
             <td><?=$user['Email']?></td>
             <td colspan="2"><?=$user['Password']?></td>
             <td>
-              <a href="#"><img src="../images/update.png" alt="update"></a>
+              <a href="../controllers/edit.php?id=<?=$user['ID']?>"><img src="../images/update.png" alt="update"></a>
             </td>
             <td>
-              <a href="#"><img src="../images/delete.png" alt="delete"></a>
+              <a href="../controllers/delete.php?id=<?=$user['ID']?>"><img src="../images/delete.png" alt="delete"></a>
             </td>
           </tr>
           <?php endforeach; ?>
@@ -146,10 +146,10 @@ require BASE_PATH . "partials/head.php";?>
             <td><?=$arrival['Date']?></td>
             <td colspan="2"><?=$arrival['Takeoff_Time']?></td>
             <td>
-              <a href="#"><img src="../images/update.png" alt="update"></a>
+              <a href="../controllers/edit.php?ID_Arrival=<?=$arrival['ID_Arrival']?>"><img src="../images/update.png" alt="update"></a>
             </td>
             <td>
-              <a href="#"><img src="../images/delete.png" alt="delete"></a>
+              <a href="../controllers/delete.php?ID_Arrival=<?=$arrival['ID_Arrival']?>"><img src="../images/delete.png" alt="delete"></a>
             </td>
           </tr>
           <?php endforeach; ?>
@@ -178,10 +178,10 @@ require BASE_PATH . "partials/head.php";?>
             <td><?=$departure['Date']?></td>
             <td colspan="2"><?=$departure['Landing_Time']?></td>
             <td>
-              <a href="#"><img src="../images/update.png" alt="update"></a>
+              <a href="../controllers/edit.php?ID_Departure=<?=$departure['ID_Departure']?>"><img src="../images/update.png" alt="update"></a>
             </td>
             <td>
-              <a href="#"><img src="../images/delete.png" alt="delete"></a>
+              <a href="../controllers/delete.php?ID_Departure=<?=$departure['ID_Departure']?>"><img src="../images/delete.png" alt="delete"></a>
             </td>
           </tr>
           <?php endforeach; ?>
@@ -191,7 +191,6 @@ require BASE_PATH . "partials/head.php";?>
             <th>ContactID</th>
             <th>Email</th>
             <th colspan="4">Message</th>
-            <th>Update</th>
             <th>Delete</th>
           </tr>
           <?php foreach($suggestions as $suggestion) :?>
@@ -200,10 +199,7 @@ require BASE_PATH . "partials/head.php";?>
             <td><?=$suggestion['Email']?></td>
             <td colspan="4"><?=$suggestion['Message']?></td>
             <td>
-              <a href="#"><img src="../images/update.png" alt="update"></a>
-            </td>
-            <td>
-              <a href="#"><img src="../images/delete.png" alt="delete"></a>
+              <a href="../controllers/delete.php?ContactID=<?=$suggestion['ContactID']?>"><img src="../images/delete.png" alt="delete"></a>
             </td>
           </tr>
           <?php endforeach; ?>
@@ -227,7 +223,7 @@ require BASE_PATH . "partials/head.php";?>
             <td><?=$parking['Leaving_Date']?></td>
             <td><?=$parking['Leaving_Time']?></td>
             <td>
-              <a href="#"><img src="../images/delete.png" alt="delete"></a>
+              <a href="../controllers/delete.php?Parking_ID=<?=$parking['Parking_ID']?>"><img src="../images/delete.png" alt="delete"></a>
             </td>
           </tr>
           <?php endforeach; ?>

@@ -18,10 +18,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     ];
   } else {
 
-    // $entryDate = date('Y-m-d',strtotime($_POST['entry-date']));
     $entryDate = str_replace('/','-',$_POST['entry-date']);
     $entryTime = $_POST['entry-time'];
-    // $leavingDate = date('Y-m-d',strtotime($_POST['leaving-date']));
     $leavingDate = str_replace('/','-',$_POST['leaving-date']);
     $leavingTime = $_POST['leaving-time'];
     $currentDate = date('Y-m-d');

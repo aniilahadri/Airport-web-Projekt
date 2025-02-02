@@ -16,61 +16,84 @@ require BASE_PATH . "partials/head.php";?>
   <?php require BASE_PATH . "partials/header.php"?>
     <main style="flex:1">
       <div class="square-container">
-          <div class="square">
-            <div class="inner-square">
+        <div class="square">
+          <div class="text-icon">
+            <div class="text-square">
               <h1>Users</h1>
               <h3>Total:</h3>
               <?php if(isset($UserCount)) :?>
                   <p><?= $UserCount["Users"]?></p>
               <?php endif ?>
-              <button class="details-button-user">Details</button>
             </div>
             <img src="../images/users_people_icon.png" alt="users">
           </div>
-          <div class="square">
-            <div class="inner-square">
-              <h1>Arrivals</h1>
+          <div class="button-square">
+            <button class="details-button-user">Details</button>
+            <a href=""><button>Add</button></a>
+          </div>
+        </div>
+        <div class="square">
+            <div class="text-icon">
+              <div class="text-square">
+                <h1>Arrivals</h1>
               <h3>Total:</h3>
               <?php if(isset($ArrivalsCount)) :?>
                   <p><?= $ArrivalsCount["Arrivals"]?></p>
               <?php endif ?>
-              <button class="details-button-arrival">Details</button>
             </div>
             <img src="../images/land_flight_icon.png" alt="arrival">
           </div>
-          <div class="square">
-            <div class="inner-square">
+            <div class="button-square">
+              <button class="details-button-arrival">Details</button>
+              <a href=""><button>Add</button></a>
+            </div>
+        </div>
+        <div class="square">
+          <div class="text-icon">
+            <div class="text-square">
               <h1>Departures</h1>
               <h3>Total:</h3>
               <?php if(isset($DeparturesCount)) :?>
                   <p><?= $DeparturesCount["Departures"]?></p>
               <?php endif ?>
-              <button class="details-button-departure">Details</button>
             </div>
             <img src="../images/takeoff_line_icon.png" alt="departure">
           </div>
-          <div class="square">
-            <div class="inner-square">
+          <div class="button-square">
+            <button class="details-button-departure">Details</button>
+            <a href=""><button>Add</button></a>
+          </div>
+        </div>
+        <div class="square">
+          <div class="text-icon">
+            <div class="text-square">
               <h1>Feedback</h1>
               <h3>Total:</h3>
               <?php if(isset($SuggestionsCount)) :?>
                   <p><?= $SuggestionsCount["Suggestions"]?></p>
               <?php endif ?>
-              <button class="details-button-sug">Details</button>
             </div>
             <img src="../images/feedback_icon.png" alt="like">
           </div>
-          <div class="square">
-            <div class="inner-square">
+          <div class="button-square">
+            <button class="details-button-sug">Details</button>
+          </div>
+        </div>
+        <div class="square">
+          <div class="text-icon">
+            <div class="text-square">
               <h1>Parking</h1>
               <h3>Total:</h3>
               <?php if(isset($ParkingsCount)) :?>
                   <p><?= $ParkingsCount["Parkings"]?></p>
               <?php endif ?>
-              <button class="details-button-parking">Details</button>
             </div>
             <img src="../images/parking_icon.png" alt="parking">
           </div>
+          <div class="button-square">
+            <button class="details-button-parking">Details</button>
+          </div>
+        </div>
       </div>
       <div class="table-container">
         <table id="users" class="users">
@@ -80,7 +103,6 @@ require BASE_PATH . "partials/head.php";?>
             <th>Name</th>
             <th>Email</th>
             <th colspan="2">Password</th>
-            <th><a href="">Add</a></th>
             <th>Update</th>
             <th>Delete</th>
           </tr>
@@ -91,13 +113,15 @@ require BASE_PATH . "partials/head.php";?>
             <td><?=$user['Name']?></td>
             <td><?=$user['Email']?></td>
             <td colspan="2"><?=$user['Password']?></td>
-            <td></td>
-            <td><a href="#">Click</a></td>
-            <td><a href="#">Click</a></td>
+            <td>
+              <a href="#"><img src="../images/update.png" alt="update"></a>
+            </td>
+            <td>
+              <a href="#"><img src="../images/delete.png" alt="delete"></a>
+            </td>
           </tr>
           <?php endforeach; ?>
         </table>
-        <!-- <a href="#" class="insert-user"><button>Insert into User</button></a> -->
         <table id="arrivals" class="arrival">
           <tr>
             <th>ID_Arrival</th>
@@ -108,7 +132,6 @@ require BASE_PATH . "partials/head.php";?>
             <th>Status</th>
             <th>Date</th>
             <th colspan="2">Takeoff_Time</th>
-            <th><a href="">Add</a></th>
             <th>Update</th>
             <th>Delete</th>
           </tr>
@@ -122,13 +145,15 @@ require BASE_PATH . "partials/head.php";?>
             <td><?=$arrival['Status']?></td>
             <td><?=$arrival['Date']?></td>
             <td colspan="2"><?=$arrival['Takeoff_Time']?></td>
-            <td></td>
-            <td><a href="#">Click</a></td>
-            <td><a href="#">Click</a></td>
+            <td>
+              <a href="#"><img src="../images/update.png" alt="update"></a>
+            </td>
+            <td>
+              <a href="#"><img src="../images/delete.png" alt="delete"></a>
+            </td>
           </tr>
           <?php endforeach; ?>
         </table>
-        <!-- <a href="#" class="insert-arrival"><button>Insert into Arrivals</button></a> -->
         <table id="departures" class="departure">
           <tr>
             <th>ID_Departure</th>
@@ -139,7 +164,6 @@ require BASE_PATH . "partials/head.php";?>
             <th>Status</th>
             <th>Date</th>
             <th colspan="2">Landing_Time</th>
-            <th><a href="">Add</a></th>
             <th>Update</th>
             <th>Delete</th>
           </tr>
@@ -153,13 +177,15 @@ require BASE_PATH . "partials/head.php";?>
             <td><?=$departure['Status']?></td>
             <td><?=$departure['Date']?></td>
             <td colspan="2"><?=$departure['Landing_Time']?></td>
-            <td></td>
-            <td><a href="#">Click</a></td>
-            <td><a href="#">Click</a></td>
+            <td>
+              <a href="#"><img src="../images/update.png" alt="update"></a>
+            </td>
+            <td>
+              <a href="#"><img src="../images/delete.png" alt="delete"></a>
+            </td>
           </tr>
           <?php endforeach; ?>
         </table>
-        <!-- <a href="#" class="insert-departure"><button>Insert into Depratures</button></a> -->
         <table id="suggestions" class="suggestion">
           <tr>
             <th>ContactID</th>
@@ -173,12 +199,15 @@ require BASE_PATH . "partials/head.php";?>
             <td><?=$suggestion['ContactID']?></td>
             <td><?=$suggestion['Email']?></td>
             <td colspan="4"><?=$suggestion['Message']?></td>
-            <td><a href="#">Click</a></td>
-            <td><a href="#">Click</a></td>
+            <td>
+              <a href="#"><img src="../images/update.png" alt="update"></a>
+            </td>
+            <td>
+              <a href="#"><img src="../images/delete.png" alt="delete"></a>
+            </td>
           </tr>
           <?php endforeach; ?>
         </table>
-        <!-- <a href="#" class="insert-suggestion"><button>Suggestions</button></a> -->
         <table id="parkings" class="parking">
           <tr>
             <th>Parking_ID</th>
@@ -197,11 +226,12 @@ require BASE_PATH . "partials/head.php";?>
             <td><?=$parking['Entry_Time']?></td>
             <td><?=$parking['Leaving_Date']?></td>
             <td><?=$parking['Leaving_Time']?></td>
-            <td><a href="#">Click</a></td>
+            <td>
+              <a href="#"><img src="../images/delete.png" alt="delete"></a>
+            </td>
           </tr>
           <?php endforeach; ?>
         </table>
-        <!-- <a href="#" class="insert-parking"><button>parkings</button></a> -->
       </div>
     </main>
 
